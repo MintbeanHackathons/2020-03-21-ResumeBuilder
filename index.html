@@ -7,49 +7,15 @@
   </head>
   <body>
     <h1>My Resume</h1>
-    <form onsubmit="createResume(event)">
-      <div>
-        <label htmlFor="name">
-          Name:
-        </label>
-        <input name="name" type="text" />
-      </div>
-      <div></div>
-      <label htmlFor="title">
-        Title:
-      </label>
-      <input name="title" type="text" />
-    </div>
-    <div>
-      <label htmlFor="picture">
-        Picture:
-      </label>
-      <input name="picture" type="text" />
-    </div>
-    <div>
-      <label htmlFor="email">
-        Email:
-      </label>
-      <input name="email" type="text" />
-    </div>
-    <div>
-      <label htmlFor="phone">
-        Phone Number:
-      </label>
-      <input name="phone" type="text" />
-    </div>
-    <div>
-      <label htmlFor="Website">
-        Website:
-      </label>
-      <input name="website" type="text" />
-    </div>
-    <div>
-      <label htmlFor="Summary">
-        Summary:
-      </label>
-      <textarea name="summary"></textarea>
-    </div>
+    <form onsubmit="createResume()">
+      <div id="name">Name:<input name="name" type="text" /></div>
+      <div id="title">Title:<input name="title" type="text" /></div>
+      <div id="picture">Picture:<input name="picture" type="text" /></div>
+      <div id="email">Email:<input name="email" type="email" /></div>
+      <div id="phone">Phone Number:<input name="phone" type="tel" /></div>
+      <div id="website">Website: <input name="website" type="url" /></div>
+      <div id="summary">Summary:<textarea name="summary"></textarea></div>
+      <button type="submit">Submit</button>
     </form>
   </body>
   <script type="text/javascript" src="script.js"></script>
