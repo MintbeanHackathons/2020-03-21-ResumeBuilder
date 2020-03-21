@@ -1,7 +1,8 @@
-function myFunction() {
-    document.getElementById("myForm").submit();
-  }
-  
+var form = document.getElementById('myForm');
+form.onsubmit=function(e){
+    e.preventDefault();
+    console.log(form.name);
+};
 var myObj, myJSON, text, obj;
 
 // Storing data:
