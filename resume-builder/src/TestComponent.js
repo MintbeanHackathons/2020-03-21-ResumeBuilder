@@ -114,33 +114,62 @@ class TestComponent extends Component {
   //   }
   // }
 
+  // this is bad, wouldn't use in final implementation
+  handleNameChange = e => {
+    e.preventDefault()
+    this.setState({
+      basics: {
+        name: e.target.elements[0].value,
+        label: e.target.elements[1].value,
+        picture: e.target.elements[2].value
+      }
+      // insert rest of resume elements here
+    })
+  }
+
   render() {
     return (
       <div>
-        <p>{JSON.stringify(this.state)}</p>
-        <form>
-          <h3 className="basics">Basics</h3>
-          <p>Name</p>
-          <input type="textarea"nChange={e => this.handleChange(e)}/>
-          <p></p>
-          <input></input>
-          <h3>work</h3>
+        <div>
+          <form onSubmit={this.handleNameChange}>
+            <h3 className="basics">Basics</h3>
+            <p>Name</p>
+            <input type="textarea"/>
+            <p>Label</p>
+            <input></input>
+            <p>Picture</p>
+            <input></input>
+            <p>Email</p>
+            <input></input>
+            <p>Phone</p>
+            <input></input>
+            <p>Website</p>
+            <input></input>
+            <p>Summary</p>
+            <input></input>
+            <h3>Work</h3>
 
-          <h3>volunteer</h3>
+            <h3>Volunteer</h3>
 
-          <h3>education</h3>
+            <h3>Education</h3>
 
-          <h3>awards</h3>
+            <h3>Awards</h3>
 
-          <h3>publications</h3>
+            <h3>Publications</h3>
 
-          <h3>language</h3>
+            <h3>Language</h3>
 
-          <h3>Interests</h3>
+            <h3>Interests</h3>
 
-          <h3>References</h3>
-          <button type="submit">Submit</button>
-        </form>
+            <h3>References</h3>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+        <div>
+          <h3>JSON resume:</h3>
+          <p>{JSON.stringify(this.state)}</p>
+        </div>
+        
       </div>
     );
   }
