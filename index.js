@@ -259,7 +259,8 @@ function showCommands() {
                     case 'b':
                         const info = Object.entries(resume.basics);
                         info.forEach(([key, value], index) => {
-                            console.log(`[${index}] ${key}: ${value}`);
+                            key !== 'location' ? console.log(`[${index}] ${key}: ${value}`)
+                            : console.log(`[${index}] location: ${Object.values(resume.basics.location)}`);
                         });
                         rl.question('\u001b[33;1mEnter index number.\n\u001b[0m', number => {
                             console.log('\u001b[31;1mDeleted from basic information.\u001b[0m');
@@ -294,7 +295,7 @@ function showCommands() {
                         resume.skills.forEach((skill, index) => {
                             console.log(`[${index}] ${skill.name}`);
                         });
-                        
+
                         rl.question('\u001b[33;1mEnter index number.\n\u001b[0m', number => {
                             console.log('\u001b[31;1mDeleted from skills.\u001b[0m');
                             resume.skills.splice(number, number + 1);
