@@ -294,7 +294,7 @@ function showCommands() {
                             console.log(`[${index}] ${skill.name}`);
                             rl.question('Enter index number.\n', number => {
                                 console.log("Deleted from skills.");
-                                resume.skill.splice(number, number + 1);
+                                resume.skills.splice(number, number + 1);
                                 showCommands();
                             });
                         });
