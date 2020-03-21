@@ -2,13 +2,14 @@
 <html>
 <head>
 <title>Resume Builder</title>
+<script src="myScript.js"></script>
 </head>
 <body>
 
 <h1>Resumer Builder</h1>
 <p>Using JSON resume builder API.</p>
 
-<form action="/action_page.php" method="post">
+<form id="myForm" action="/action_page.php" method="post">
     <label for="name">first name:</label><br>
     <input type="text" id="name" name="name" value="Name"><br>
     
@@ -20,7 +21,8 @@
     
     <input type="submit" value="Submit">
   </form>
-  
+
+<p id="demo"></p>
 
 
 </body>
