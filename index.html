@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+
+</head>
+<body>
+    <h1>Resume Builder</h1>
+    <form action="">
+        <fieldset class="basic">
+            <legend>basic</legend>
+
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name">
+            
+            <label for="label">Job Title</label>
+            <input type="text" id="label" name="label">
+    
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+
+            <label for="phone">Phone</label>
+            <input type="email" id="phone" name="phone">
+
+            <label for="website">Website</label>
+            <input type="text" id="website" name="website">
+
+            <label for="location">Location</label>
+            <input type="text" id="location" name="location">
+
+            <label for="about">about</label>
+            <textarea name="about" id="about" cols="30" rows="10"></textarea>
+
+            <label for="profile">Profile(s)</label>
+            <div class="profileInner">
+                <input type="text" id="profileUsername" name="profileUsername" placeholder="profile username">
+                <input type="text" id="profileUrl" name="profileUrl" placeholder="profile URL">
+                <input type="text" id="profileNetwork" name="profileNetwork" placeholder="profile network">
+            </div>
+            <input type="button" value="Add a field" class="add profileAdd" id="profileAdd" >
+
+        </fieldset>
+
+        <fieldset class="work">
+            <legend>work experiences</legend>
+            <div class="workContent">
+                <div class="workInner">
+                    <label for="workCompany">Company</label>
+                    <input type="text" id="workCompany" name="workCompany">
+                    
+                    <label for="workPosition">Position</label>
+                    <input type="text" id="workPosition" name="workPosition">
+    
+                    <label for="workStartDate">start date</label>
+                    <input type="date" id="workStartDate" name="workStartDate">
+    
+                    <label for="workEndDate">end date</label>
+                    <input type="date" id="workEndDate" name="workEndDate">
+    
+                    <textarea name="workSummary" id="workSummary" cols="30" rows="10"></textarea>
+    
+                    <div class="inner">
+                        <div class="innerContent">
+                            <label for="workHighlight">Highlight</label>
+                            <input type="text" id="workHighlight" name="workHighlight">
+                        </div>
+    
+                        <input type="button" value="Add a field" class="innerAdd workHighightAdd" id="workHighightAdd">
+                    </div>
+                </div> <!--work experience end-->
+            </div>
+
+            <input type="button" value="Add a field" class="add workAdd" id="workAdd">
+        </fieldset>
+
+        <fieldset class="volunteer">
+            <legend>volunteer experiences</legend>
+            <div class="volunteerContent">
+                <div class="volunteerInner">
+                    <label for="volunteerCompany">Company</label>
+                    <input type="text" id="volunteerCompany" name="volunteerCompany">
+                
+                    <label for="volunteerPosition">Position</label>
+                    <input type="text" id="volunteerPosition" name="volunteerPosition">
+                
+                    <label for="volunteerStartDate">start date</label>
+                    <input type="date" id="volunteerStartDate" name="volunteerStartDate">
+                
+                    <label for="volunteerEndDate">end date</label>
+                    <input type="date" id="volunteerEndDate" name="volunteerEndDate">
+                
+                    <textarea name="volunteerSummary" id="volunteerSummary" cols="30" rows="10"></textarea>
+                
+                    <div class="volunteerHighlightInner">
+                        <label for="volunteerHighlight">High Light</label>
+                        <input type="text" id="volunteerHighlight" name="volunteerHighlight">
+                    </div>
+                
+                    <input type="button" value="Add a field" class="innerAdd volunteerHighightAdd" id="volunteerHighightAdd">
+                </div>
+            </div>
+            <!--volunteer experience end-->
+            
+            <input type="button" value="Add a field" class="add volunteerAdd" id="volunteerAdd">
+        </fieldset>
+
+        <fieldset class="education">
+            <legend>education</legend>
+            <div class="educationContent">
+                <div class="educationInner">
+                    <label for="institution">Institution</label>
+                    <input type="text" id="institution" name="institution">
+        
+                    <label for="area">Area</label>
+                    <input type="text" id="area" name="area">
+        
+                    <label for="studyType">Study Type</label>
+                    <input type="text" id="studyType" name="studyType">
+        
+                    <label for="educationStartDate">start date</label>
+                    <input type="date" id="educationStartDate" name="educationStartDate">
+                    
+                    <label for="educationEndDate">end date</label>
+                    <input type="date" id="educationEndDate" name="educationEndDate">
+        
+                    <label for="gpa">GPA</label>
+                    <input type="number" id="gpa" name="gpa">
+        
+                    <div class="couseInner">
+                        <label for="course">Course</label>
+                        <input type="text" id="course" name="course">
+                        <input type="button" value="Add a field" class="add courseAdd" id="courseAdd">
+                    </div> <!--course holder ends-->
+                </div> <!--education ends-->
+            </div>
+            
+            <input type="button" value="Add a field" class="add educationAdd" id="educationAdd">
+        </fieldset>
+
+        <fieldset class="award">
+            <legend>awards</legend>
+            <div class="awardContent">
+                <div class="awardInner">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title">
+    
+                    <label for="awardDate">Date</label>
+                    <input type="date" id="awardDate" name="awardDate">
+    
+                    <label for="awarder">Awarder</label>
+                    <input type="text" id="awarder" name="awarder">
+    
+                    <label for="awardSummary">Summary</label>
+                    <textarea name="awardSummary" id="awardSummary" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+            <input type="button" value="Add a field" class="add awardsAdd" id="awardsAdd">
+        </fieldset>
+
+        <fieldset class="publication">
+            <legend>publication</legend>
+            <div class="publicationContent">
+                <div class="publicationInner">
+                    <label for="publicationName">Name</label>
+                    <input type="text" id="publicationName" name="publicationName"> 
+    
+                    <label for="publisher">Publisher</label>
+                    <input type="text" id="publisher" name="publisher">
+    
+                    <label for="releaseDate">release Date</label>
+                    <input type="date" id="releaseDate" name="releaseDate">
+    
+                    <label for="website">Website</label>
+                    <input type="text" id="website" name="website">
+    
+                    <label for="publicationSummary">Summary</label>
+                    <textarea name="publicationSummary" id="publicationSummary" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+
+            <input type="button" value="Add a field" class="add publicationAdd" id="publicationAdd">
+        </fieldset>
+
+        <fieldset class="skill">
+            <legend>Skill</legend>
+            <div class="skillContent">
+                <div class="skillInner">
+                    <label for="skillName">Name</label>
+                    <input type="text" id="skillName" name="skillName">
+    
+                    <label for="skillLevel">Level</label>
+                    <input type="text" id="skillLevel" name="skillLevel">
+    
+                    <label for="skillKeywords">Keywords</label>
+                    <input type="text" id="skillKeywords" name="skillKeywords">
+    
+                    <input type="button" value="Add a field" class="add keywordAdd" id="keywordAdd">
+                </div>
+            </div>
+
+            <input type="button" value="Add a field" class="add skillAdd" id="skillAdd">
+        </fieldset>
+
+        <fieldset class="language">
+            <legend>Languages</legend>
+            <div class="langugageContent">
+                <div class="languageInner">
+                    <label for="language">Language</label>
+                    <input type="text" id="language" name="language">
+            
+                    <label for="fluency">Fluency</label>
+                    <input type="text" id="fluency" name="fluency">
+                </div>
+            </div>
+        
+            <input type="button" value="Add a field" class="add languageAdd" id="languageAdd">
+        </fieldset>
+
+        <fieldset class="interest">
+            <legend>Interests</legend>
+            <div class="interestContent">
+                <div class="interestInner">
+                    <label for="interestName">Name</label>
+                    <input type="text" id="interestName" name="interestName">
+            
+                    <label for="interestKeywords">Keywords</label>
+                    <input type="text" id="interestKeywords" name="interestKeywords">
+            
+                    <input type="button" value="Add a field" class="add keywordAdd" id="keywordAdd">
+                </div>
+            </div>
+        
+            <input type="button" value="Add a field" class="add interestAdd" id="interestAdd">
+        </fieldset>
+
+        <fieldset class="reference">
+            <legend>Reference</legend>
+            <div class="referenceContent">
+                <div class="referenceInner">
+                    <label for="referenceName">Name</label>
+                    <input type="text" id="referenceName" name="referenceName">
+            
+                    <label for="referenceContent">reference</label>
+                    <textarea name="referenceContent" id="referenceContent" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+        
+            <input type="button" value="Add a field" class="add interestAdd" id="interestAdd">
+        </fieldset>
+
+        <button>submit</button>
+    </form>
+
+    <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+    <script src="script.js"></script>
+</body>
+</html>
