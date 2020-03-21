@@ -15,13 +15,17 @@
     <main>
         <section class="builder">
             <form class="builderTemplate">
+                <h2>Input</h2>
                 <label for="userInput">Complete template below:</label>
+                <!-- textarea will be preloaded with value from javascript -->
                 <textarea name="userInput" id="userInput"></textarea>
                 <button class="reset">Reset template!</button>
                 <button class="build" type="submit">Build JSON Resume!</button>
             </form>
             <form class="builderComplete">
+                <h2>Output</h2>
                 <label for="builderOutput">Access JSON Resume below:</label>
+                <!-- textarea will be loaded upon build click -->
                 <textarea name="builderOutput" id="builderOutput"></textarea>
                 <button class="clipboard">Copy to clipboard</button>
                 <button class="download">Download .JSON</button>

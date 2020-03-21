@@ -45,6 +45,9 @@ body {
 
 header, footer {
     height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 main {
@@ -55,18 +58,37 @@ main {
 
 .builder {
     display: flex;
+    justify-content: space-between;
 }
 
 .builder form {
-    width: 50%;
-    height: 100%;
+    width: calc(50% - 10px);
+}
+
+h2 {
+    text-align: center;
+    margin: 2.5rem 0;
 }
 
 label,
 textarea {
     width: 100%;
+    resize: none;
 }
 
 textarea {
     height: 50vh;
+}
+
+button {
+    background: #000;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    margin-top: 3rem;
+    padding: 1rem 1.5rem;
+}
+
+button:not(:first-child) {
+    margin-right: 3rem;
 }
