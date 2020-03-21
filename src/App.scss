@@ -1,11 +1,15 @@
-.main {
-}
-
 .form {
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 500px;
 
-  &__input {
+  &__education {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__work {
+    display: flex;
+    flex-direction: column;
   }
 }
