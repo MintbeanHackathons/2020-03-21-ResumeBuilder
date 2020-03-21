@@ -7,8 +7,8 @@ export default function Button(props) {
 
   return (
     <div className="button">
-      <button type="button" className="button__back" onClick={back}>Back</button>
-      <button type="submit" className="button__submit">{textNext}</button>
+      <button className="button__button" type="submit">{textNext}</button>
+      <button className="button__button" type="button" onClick={back}>Back</button>
     </div>
   );
 }

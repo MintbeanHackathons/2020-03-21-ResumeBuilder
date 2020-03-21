@@ -9,9 +9,12 @@ export default function Form(props) {
   }
 
   return(
-    <form className="form" onSubmit={submitHandler}>
-      {/* will flip between the different inputs */}
-      <Basics/>
-    </form>
+    <>
+      <h1 className="title">A form that doesn't do anything... yet</h1>
+      <form className="form" onSubmit={submitHandler}>
+        {/* will flip between the different inputs */}
+        <Basics/>
+      </form>
+    </>
   )
 }
