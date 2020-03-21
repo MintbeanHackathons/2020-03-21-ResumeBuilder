@@ -181,7 +181,7 @@ function showCommands() {
                 };
             };
 
-            rl.question('Which category?\n', getCategory);
+            rl.question('Which category?\n(b) Basics • (w) Work • (e) Education • (s) Skills\n', getCategory);
             showCommands();
         // Save resume to file
         } else if (answer === 's') {
