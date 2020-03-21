@@ -1,0 +1,19 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+label {
+  display: block;
+}
+
+.basic-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px;
+}
