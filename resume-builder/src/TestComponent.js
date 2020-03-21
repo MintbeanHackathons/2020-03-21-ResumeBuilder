@@ -94,19 +94,51 @@ class TestComponent extends Component {
       "reference": "Reference..."
     }]
   }
+  // TODO
+  // 1. Use immutability-helper to handle nested data
+  // 2. Programatically create an input for each key
+  // 3. Setup append for array outputs && create
+  //    a button to clear all array contents
 
-  handleChange = (e) => {
-    this.setState({
-      sayStuff: e.target.value
-    })
-  }
+
+  // programatically create input elements
+  // componentDidMount() {
+  //   for (let i=0; i < Object.keys(this.state.basics).length; i++) {
+  //     console.log(Object.keys(this.state.basics)[i])
+  //     let newInput = document.createElement("input")
+  //     let elementLabel = document.createElement("p")
+  //     elementLabel.innerText = Object.keys(this.state.basics)[i]
+  //     newInput.className = Object.keys(this.state.basics)[i]
+  //     document.querySelector('.basics').appendChild(elementLabel)
+  //     document.querySelector('.basics').appendChild(newInput)
+  //   }
+  // }
 
   render() {
     return (
       <div>
         <p>{JSON.stringify(this.state)}</p>
         <form>
-          <input type="textarea" onChange={e => this.handleChange(e)}/>
+          <h3 className="basics">Basics</h3>
+          <p>Name</p>
+          <input type="textarea"nChange={e => this.handleChange(e)}/>
+          <p></p>
+          <input></input>
+          <h3>work</h3>
+
+          <h3>volunteer</h3>
+
+          <h3>education</h3>
+
+          <h3>awards</h3>
+
+          <h3>publications</h3>
+
+          <h3>language</h3>
+
+          <h3>Interests</h3>
+
+          <h3>References</h3>
           <button type="submit">Submit</button>
         </form>
       </div>
