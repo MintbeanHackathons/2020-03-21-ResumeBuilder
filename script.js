@@ -15,24 +15,37 @@ function createResume() {
   //Initializes an object with Resume JSON structure
   let resume = {
     basics: { location: {} },
-    work: {},
-    volunteer: {},
-    education: {},
-    awards: {},
-    publications: {},
-    skills: {},
-    languages: {},
-    interests: {},
-    references: {},
+    work: [],
+    volunteer: [],
+    education: [],
+    awards: [],
+    publications: [],
+    skills: [],
+    languages: [],
+    interests: [],
+    references: [],
   };
   const inputs = getInputs(resume);
   //Loops over each type of input
   Object.keys(inputs).forEach(inputType => {
     //Loops over array of inputs for each type, and puts their
     //names and values in the resume object
-    Object.values(inputs[inputType]).forEach(input => {
-      resume[inputType][input.name] = input.value;
+    //['company x',  ]
+    let instance = {};
+    inputs[inputType].forEach(input => {
+      if (inputType === 'basics') {
+        resume[inputType][input.name] = input.value;
+      } else {
+        if (instance[input.name] !== undefined) {
+          resume[inputType].push(instance);
+          instance = {};
+        }
+        instance[input.name] = input.value;
+      }
     });
+    if (inputType !== 'basics') {
+      resume[inputType].push(instance);
+    }
   });
   //Loops over inputs within inputs from resume structure and fills
   //with appropriate names and values
