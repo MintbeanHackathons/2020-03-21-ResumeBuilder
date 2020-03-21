@@ -15,7 +15,14 @@ let resume = {
         "email": "",
         "phone": "",
         "website": "",
-        "summary": ""
+        "summary": "",
+        "location": {
+            "address": "",
+            "city": "",
+            "state": "",
+            "postalCode": "",
+            "country": ""
+        },
       },
       "work": [],
       "education": [],
@@ -47,7 +54,7 @@ fs.readFile(fileName, (err, data) => {
 
 function showCommands() {
     // Show command options after every request is completed
-    rl.question(`(v) View • (a) Add • (d) Delete • (s) Save • (q) Quit\n`, answer => {
+    rl.question(`\u001b[36;1m(v) View • (a) Add • (d) Delete • (s) Save • (q) Quit\n\u001b[0m`, answer => {
         // View resume
         if (answer === 'v') {
             const categories = Object.entries(resume);
@@ -58,21 +65,56 @@ function showCommands() {
         // Add resume item
         } else if (answer === 'a') {
             const getCategory = () => {
-                rl.question('(b) Basics • (w) Work • (e) Education • (l) Languages • (s) Skills • (r) References\n', category => {
+                rl.question('\u001b[35;1m(b) Basics • (w) Work • (e) Education • (l) Languages • (s) Skills • (r) References\n\u001b[0m', category => {
                     switch(category) {
                         case 'b':
                             const getBasic = () => {
-                                rl.question('Please select a field: name • label • picture • email • phone • summary\n', field => {
-                                    field === 'name' || field === 'label' || field === 'picture' || field === 'email' || field === 'phone' || field === 'summary' ? 
-                                    rl.question(`Enter ${field}:\n`, answer => {
-                                        resume['basics'][field] = answer;
-                                        const fieldName = field[0].toUpperCase() + field.slice(1);
-                                        console.log(`${fieldName} added successfully. 👏`)
-                                        showCommands();
-                                    })
-                                    : 
-                                    console.log("Please enter a valid field.");
-                                    getBasic();
+                                rl.question('\u001b[34;1mPlease select a field: name • label • picture • email • phone • summary • location\nEnter "main" to return to main menu\n\u001b[0m', field => {
+                                    switch(field) {
+                                        case 'name' || 'label' || 'picture' || 'email' || 'phone' || 'summary':
+                                            rl.question(`Enter ${field}:\n`, answer => {
+                                                resume['basics'][field] = answer;
+                                                const fieldName = field[0].toUpperCase() + field.slice(1);
+                                                console.log(`\u001b[32;1m${fieldName} added successfully. 👏\n\u001b[0m`)
+                                                showCommands();
+                                            });
+                                            break;
+                                        case 'location':
+                                            const getAddress = answer => {
+                                                resume.basics.location.address = answer;
+                                                rl.question('\u001b[33;1mCity?\n', getCity);
+                                            };
+
+                                            const getCity = answer => {
+                                                resume.basics.location.city = answer;
+                                                rl.question('\u001b[33;1mState? (Hit enter if N/A)\n\u001b[0m', getState);
+                                            };
+
+                                            const getState = answer => {
+                                                resume.basics.location.state = answer;
+                                                rl.question('\u001b[33;1mPostal Code?\n\u001b[0m', getPostalCode);
+                                            };
+                                            
+                                            const getPostalCode = answer => {
+                                                resume.basics.location.postalCode = answer;
+                                                rl.question('\u001b[33;1mCountry?\n\u001b[0m', getCountry);
+                                            };
+
+                                            const getCountry = answer => {
+                                                resume.basics.location.country = answer;
+                                                console.log(`\u001b[32;1mAddress added successfully. 👏\n\u001b[0m`)
+                                                showCommands();
+                                            };
+
+                                            rl.question('\u001b[33;1mAddress?\n\u001b[0m', getAddress);
+                                            break;
+                                        case 'main':
+                                            showCommands();
+                                            break;
+                                        default:
+                                            console.log("Please enter a valid field.");
+                                            getBasic();
+                                    };
                                 });
                             };
                             
@@ -104,7 +146,7 @@ function showCommands() {
                             const getSummary = answer => {
                                 job['summary'] = answer;
                                 resume.work.push(job);
-                                console.log('Work experience added successfully. 👏');
+                                console.log('\u001b[32;1mWork experience added successfully. 👏\n\u001b[0m');
                                 showCommands();
                             };
 
@@ -136,7 +178,7 @@ function showCommands() {
                             const getEducationEndDate = answer => {
                                 school['endDate'] = answer;
                                 resume.education.push(school);
-                                console.log('Education added successfully. 👏');
+                                console.log('\u001b[32;1mEducation added successfully. 👏\n\u001b[0m');
                                 showCommands();
                             };
 
@@ -153,7 +195,7 @@ function showCommands() {
                             const getFluency = answer => {
                                 language['fluency'] = answer;
                                 resume.languages.push(language);
-                                console.log('Language added successfully. 👏')
+                                console.log('\u001b[32;1mLanguage added successfully. 👏\n\u001b[0m')
                                 showCommands();
                             };
 
@@ -178,7 +220,7 @@ function showCommands() {
                                 answerArr.forEach(keyword => keywords.push(keyword.trim()));
                                 skill['keywords'] = keywords;
                                 resume.skills.push(skill);
-                                console.log('Skill added successfully. 👏');
+                                console.log('\u001b[32;1mSkill added successfully. 👏\n\u001b[0m');
                                 showCommands();
                             };
 
@@ -195,7 +237,7 @@ function showCommands() {
                             const getReference = answer => {
                                 reference['reference'] = answer;
                                 resume.references.push(reference);
-                                console.log('Reference added successfully. 👏');
+                                console.log('\u001b[32;1mReference added successfully. 👏\n\u001b[0m');
                                 showCommands();
                             };
 
@@ -277,7 +319,7 @@ function showCommands() {
             });
         // Quit
         } else if (answer === 'q') {
-            console.log('See you soon! 😄');
+            console.log('==============================\nThank you for using Resume Builder! 😄\n==============================');
             rl.close();
         } else {
             console.log('Please enter a valid command.');
