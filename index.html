@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Social Media Share Links: LinkedIn, Facebook, Etc. -->
+    <meta
+      name="image"
+      property="og:image"
+      content="https://github.com/CodeMeKathy/cmk-dev-happiness/blob/master/assets/GitHub%20Social%20Preview%20Small.png?raw=true"
+    />
+
+    <!-- WhatsApp -->
+    <meta
+      name="image"
+      property="image"
+      content="https://github.com/CodeMeKathy/cmk-dev-happiness/blob/master/assets/GitHub%20Soc   ial%20Preview%20Small.png?raw=true"
+    />
+
+    <meta
+      property="og:title"
+      content="Kathy Lambert | Developer Extraordinaire"
+    />
+    <meta property="og:url" content="https://kathylambert.me" />
+    <meta
+      property="og:description"
+      content="Kathy Lambert | Developer Extraordinaire Personal Portfolio"
+    />
+    <meta
+      name="”description”"
+      content="”Kathy"
+      Lambert
+      |
+      Developer
+      Extraordinaire
+      Personal
+      Portfolio”
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Author Information -->
+    <meta
+      name="author"
+      content="Kathy Lambert Personal Portfolio"
+      href="https://kathylambert.me"
+    />
+    <meta
+      name="author"
+      content="Kathy Lambert GitHub Portfolio"
+      href="https://github.com/CodeMeKathy"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-touch-icon.png?v=eEG6YMEev5"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon-32x32.png?v=eEG6YMEev5"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon-16x16.png?v=eEG6YMEev5"
+    />
+    <link rel="manifest" href="/site.webmanifest?v=eEG6YMEev5" />
+    <link
+      rel="mask-icon"
+      href="/safari-pinned-tab.svg?v=eEG6YMEev5"
+      color="#40c0cb"
+    />
+    <link rel="shortcut icon" href="/favicon.ico?v=eEG6YMEev5" />
+    <meta name="apple-mobile-web-app-title" content="Kathy Lambert" />
+    <meta name="application-name" content="Kathy Lambert" />
+    <meta name="msapplication-TileColor" content="#40c0cb" />
+    <meta name="theme-color" content="#40c0cb" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>ResumeBuilder</title>
+  </head>
+  <body>
+  <header></header>
+  <main>
+    <h1>Resume Builder</h1>
+    <div class="container">
+      <form id='resumeInputForm'>
+        <h5>Basics</h5>
+        <div class="row">
+          <div class="col left-col">
+            <div class="form-group">
+              <label for="formGroupExampleInput">Name</label>
+              <input type="text" class="form-control" id="formGroupNameInput" placeholder="Jane Smith">
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Email</label>
+              <input type="email" class="form-control" id="formGroupEmailInput" placeholder="JaneSmith@JaneSmith.me">
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Phone Number</label>
+              <input type="number" class="form-control" id="formGroupPhoneInput" placeholder="(912) 555-4321"">
+            </div>
+            <div class="form-group">
+              <label for="formGroupAddressInput">Address</label>
+              <input type="text" class="form-control" id="formGroupAddressInput" placeholder="1234 Main St">
+            </div>
+          </div>
+          <div class="col right-col">
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Professional Title</label>
+              <input type="text" class="form-control" id="formGroupLabelInput" placeholder="Software Developer">
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Website</label>
+              <input type="text" class="form-control" id="formGroupWebsiteInput" placeholder="JaneSmith.me">
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">HeadShot</label>
+              <input type="text" class="form-control" id="formGroupPictureInput" placeholder="JaneSmith.jpeg">
+            </div>
+            <div class="form-group">
+              <label for="formGroupCityInput">City</label>
+              <input type="text" class="form-control" id="formGroupCityInput" placeholder="Oakland">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group padding col-md-6">
+            <label for="formGroupPostalCodeInput">Postal Code</label>
+            <input type="text" class="form-control" id="formGroupPostalCodeInput" placeholder="94115">
+          </div>
+          <div class="form-group padding col-md-2">
+            <label for="formGroupCountryCodeInput">Country Code</label>
+            <input type="text" class="form-control" id="formGroupCountryCodeInput" placeholder="US">
+          </div>
+          <div class="form-group padding col-md-4">
+            <label for="formGroupRegionInput">Region</label>
+            <input type="text" class="form-control"" id="formGroupRegionInput" placeholder="California">
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="validationTextarea">Summary</label>
+          <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Please tell us a little about yourself. What do you want to tell employers about why you stand out." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    <div class="dataContainer">
+      
+    </div>
+  </main>
+  <footer>
+
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="./script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
