@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css?family=Italiana&display=swap');
+
+.inputCapture {
+    margin-left: 36px;
+    margin-right: 36px; 
+
+  &__intro {
+    font-size: 2rem;
+    margin-left: 23%;
+    margin-right: 23%;
+  }  
+
+  &__form {
+    font-size: 16px;
+    margin-left: 36px;
+    margin-right: 36px;
+  }
+
+  &__form-security-option {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+  }
+
+  &__form-name {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+  }
+
+  &__name-label {
+    width: 15%;
+    display: block;
+    padding-left: 38.2%;
+    font-size: larger;
+  }
+
+  &__name-field {   
+    box-sizing: border-box;
+    border: 1px black solid;
+    border-radius: 5px;
+    height: 25px;
+    font-size: large;
+    background-color: lightyellow;
+    width: 25%;
+    margin-right: 30%;
+  }
+  &__form-email {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+
+  }
+
+  &__email-label {
+    width: 25%;
+    display: block;
+    padding-left: 33.5%;
+    font-size: larger;
+  }
+
+  &__email-field {
+    box-sizing: border-box;
+    border: 1px black solid;
+    border-radius: 5px;
+    height: 25px;
+    width: 30%;
+    font-size: large;
+    background-color: lightyellow;
+    margin-right: 30%;
+  }
+
+  &__form-mortgage {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+
+  }
+
+  &__mortgage-label {
+    width: 25%;
+    display: block;
+    padding-left: 37%;
+    font-size: larger;
+  }
+
+  &__mortgage-field {
+    box-sizing: border-box;
+    border: 1px black solid;
+    border-radius: 5px;
+    height: 25px;
+    width: 38%;
+    font-size: large;
+    background-color: lightyellow;
+    margin-right: 30%;
+  }
+
+  &__form-equity {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+
+  }
+
+  &__equity-label {
+    width: 26%;
+    display: block;
+    padding-left: 23%;
+    font-size: larger;
+    margin-right: 13px;
+  }
+
+  &__equity-field {
+    box-sizing: border-box;
+    border: 1px black solid;
+    border-radius: 5px;
+    height: 25px;
+    width: 20%;
+    font-size: large;
+    background-color: lightyellow;
+    margin-right: 30%;
+  }
+
+  &__form-self-income {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+&__self-inc-label {
+    width: 25%;
+    display: block;
+    padding-left: 31%;
+    font-size: larger;
+    margin-right: 13px;
+}
+
+  &__self-inc-field {
+    box-sizing: border-box;
+    border: 1px black solid;
+    border-radius: 5px;
+    height: 25px;
+    width: 27%;
+    font-size: large;
+    background-color: lightyellow;
+    margin-right: 30%;
+}
+
+&__form-self-credit {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+&__self-credit-label {
+    width: 25%;
+    display: block;
+    padding-left: 27%;
+    font-size: larger;
+    margin-right: 13px;
+}
+
+&__self-credit-field {
+    box-sizing: border-box;
+    border: 1px black solid;
+    border-radius: 5px;
+    height: 25px;
+    width: 31%;
+    font-size: large;
+    background-color: lightyellow;
+    margin-right: 22%;
+}
+
+&__form-part-income {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+&__part-inc-label {
+    width: 29%;
+    display: block;
+    padding-left: 28%;
+    font-size: larger;
+    margin-right: 13px;
+}
+
+&__part-inc-field {
+    box-sizing: border-box;
+    border: 1px black solid;
+    border-radius: 5px;
+    height: 25px;
+    width: 27%;
+    font-size: large;
+    background-color: lightyellow;
+    margin-right: 30%;
+}
+
+&__form-part-credit {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+&__part-credit-label {
+    width: 36%;
+    display: block;
+    padding-left: 21.5%;
+    font-size: larger;
+    margin-right: 13px;
+}
+
+&__part-credit-field {
+    box-sizing: border-box;
+    border: 1px black solid;
+    border-radius: 5px;
+    height: 25px;
+    width: 36%;
+    font-size: large;
+    background-color: lightyellow;
+    margin-right: 22%;
+}
+
+&__form-security {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+&__security-label {
+    width: 23%;
+    display: block;
+    padding-left: 38.5%;
+    font-size: larger;
+    margin-right: 13px;
+}
+
+&__form-security-option {
+    box-sizing: border-box;
+    border: 1px black solid;
+    border-radius: 5px;
+    height: 25px;
+    width: 61%;
+    font-size: large;
+    background-color: lightyellow;
+    margin-right: 22%;
+}
+
+
+&__form-selfEmp {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+&__selfEmp-ind-label {
+    width: 60%;
+    display: block;
+    padding-left: 22%;
+    font-size: larger;
+    margin-right: 13px;
+}
+
+&__selfEmp-ind-field {
+    box-sizing: border-box;
+    border: 1px black solid;
+    border-radius: 5px;
+    height: 25px;
+    width: 61%;
+    font-size: large;
+    background-color: lightyellow;
+    margin-right: 22%;
+}
+
+&__button {
+    width: 250px;
+    margin-left: 40%;
+    background-color: #379c37;
+    color: white;
+    font-size: 24px;
+    height: 3rem;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+}
