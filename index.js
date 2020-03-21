@@ -270,33 +270,35 @@ function showCommands() {
                     case 'w':
                         resume.work.forEach((job, index) => {
                             console.log(`[${index}] ${job.company}`);
-                            rl.question('\u001b[33;1mEnter index number.\n\u001b[0m', number => {
-                                console.log('\u001b[31;1mDeleted from work.\u001b[0m');
-                                resume.work.splice(number, number + 1);
-                                showCommands();
-                            });
+                        });
+                        rl.question('\u001b[33;1mEnter index number.\n\u001b[0m', number => {
+                            console.log('\u001b[31;1mDeleted from work.\u001b[0m');
+                            resume.work.splice(number, number + 1);
+                            showCommands();
                         });
                         
                         break;
                     case 'e':
                         resume.education.forEach((school, index) => {
                             console.log(`[${index}] ${school.institution}`);
-                            rl.question('\u001b[33;1mEnter index number.\n\u001b[0m', number => {
-                                console.log('\u001b[31;1mDeleted from education.\u001b[0m');
-                                resume.education.splice(number, number + 1);
-                                showCommands();
-                            });
+                        });
+
+                        rl.question('\u001b[33;1mEnter index number.\n\u001b[0m', number => {
+                            console.log('\u001b[31;1mDeleted from education.\u001b[0m');
+                            resume.education.splice(number, number + 1);
+                            showCommands();
                         });
                         
                         break;
                     case 's':
                         resume.skills.forEach((skill, index) => {
                             console.log(`[${index}] ${skill.name}`);
-                            rl.question('\u001b[33;1mEnter index number.\n\u001b[0m', number => {
-                                console.log('\u001b[31;1mDeleted from skills.\u001b[0m');
-                                resume.skills.splice(number, number + 1);
-                                showCommands();
-                            });
+                        });
+                        
+                        rl.question('\u001b[33;1mEnter index number.\n\u001b[0m', number => {
+                            console.log('\u001b[31;1mDeleted from skills.\u001b[0m');
+                            resume.skills.splice(number, number + 1);
+                            showCommands();
                         });
                         
                         break;
