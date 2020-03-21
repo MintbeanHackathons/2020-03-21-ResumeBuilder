@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Builder</title>
+  </head>
+  <body>
+    <h1>My Resume</h1>
+    <form onsubmit="createResume()">
+      <div>Name:<input class="basics" name="name" type="text" /></div>
+      <div>Title:<input class="basics" name="title" type="text" /></div>
+      <div>Picture:<input class="basics" name="picture" type="text" /></div>
+      <div>Email:<input class="basics" name="email" type="email" /></div>
+      <div>Phone Number:<input class="basics" name="phone" type="tel" /></div>
+      <div>Website: <input class="basics" name="website" type="url" /></div>
+      <div>Summary:<textarea class="basics" name="summary"></textarea></div>
+      <div>
+        Address:
+        <div>Street: <input class="location" name="street" type="text" /></div>
+      </div>
+      <div id="work">
+        Work:
+        <div>Company: <input class="work" name="company" type="text" /></div>
+        <div>Position: <input class="work" name="position" type="text" /></div>
+        <div>Company: <input class="work" name="company" type="text" /></div>
+        <div>Position: <input class="work" name="position" type="text" /></div>
+        <!-- <button onclick="addMore()">
+          Add Another
+        </button> -->
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+  <script type="text/javascript" src="script.js"></script>
+</html>
