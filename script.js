@@ -1,4 +1,5 @@
-Resume = {
+app = {};
+app.resume = {
 	basics: {
 		name: "John Doe",
 		label: "Programmer",
@@ -98,3 +99,57 @@ Resume = {
 		}
 	]
 };
+app.workCounter = 0;
+
+app.moreWork = function() {
+	// append more work info
+	app.workCounter++;
+	console.log("fizz");
+	const workToAppend = `<fieldset class="work${app.workCounter}" data-jsonSection="work${app.workCounter}">${$(
+		".work0"
+	).html()}</fieldset>`;
+	$(workToAppend).insertAfter($(".work0"));
+
+	app.resume.work.push(app.resume.work[0]);
+};
+
+app.updateJSON = function() {
+	// formatting for basic information
+	for (let item in app.resume.basics) {
+		if (item != "profiles" && item != "location") {
+			app.resume.basics[item] = $(`.basics #${item}`).val();
+		} else if (item == "location") {
+			for (let locationItem in item) {
+				app.resume.basics[item][locationItem] = $(`.basics #${locationItem}`).val();
+			}
+		} else {
+			for (let profileItem in app.resume.basics[item][0]) {
+				app.resume.basics[item][0][profileItem] = $(`.basics #${profileItem}`).val();
+			}
+		}
+	}
+
+	// formatting for work information
+	for (let i = 0; i < app.resume.work.length; i++) {
+		for (let item in app.resume.work[i]) {
+			app.resume.work[i][item] = $(`.work${i} input[name='${item}']`).val();
+		}
+	}
+// pick up here later
+	console.log(app.resume.work);
+};
+
+app.init = function() {
+	$(`form`).on("submit", function(e) {
+		e.preventDefault();
+		app.updateJSON();
+	});
+
+	$(".moreWork").on("click", function() {
+		app.moreWork();
+	});
+};
+
+$(function() {
+	app.init();
+});

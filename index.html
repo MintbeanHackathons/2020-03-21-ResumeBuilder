@@ -4,6 +4,14 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Resume Builder</title>
+		<link rel="stylesheet" href="style.css" />
+
+		<!-- import jquery -->
+		<script
+			src="https://code.jquery.com/jquery-3.4.0.min.js"
+			integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+			crossorigin="anonymous"
+		></script>
 	</head>
 	<body>
 		<form action="#">
@@ -13,7 +21,7 @@
 				<label for="label">current/desired position</label>
 				<input type="text" id="label" />
 				<label for="picture">profile Picture</label>
-				<input type="image" id="picture" />
+				<input type="file" id="picture" />
 				<label for="email">email</label>
 				<input type="email" id="email" />
 				<label for="phone">primary phone number</label>
@@ -36,29 +44,30 @@
 				</fieldset>
 				<fieldset class="profiles" data-jsonSection="profiles">
 					<label for="network">network</label>
-					<input type="text" placeholder="twitter" />
+					<input type="text" placeholder="twitter" id="network" />
 					<label for="username">username</label>
 					<input type="text" id="username" />
 					<label for="url">url</label>
 					<input type="url" id="url" />
 				</fieldset>
 			</fieldset>
-			<fieldset class="work" data-jsonSection="work">
+			<fieldset class="work0" data-jsonSection="work0">
 				<label for="workCompany">company</label>
-				<input type="text" id="workCompany" />
+				<input type="text" name="company" id="workCompany" />
 				<label for="workPosition">position</label>
-				<input type="text" id="workPosition" />
+				<input type="text" name="position" id="workPosition" />
 				<label for="workWebsite">website</label>
-				<input type="text" id="workWebsite" />
+				<input type="text" name="website" id="workWebsite" />
 				<label for="workStartDate">start date</label>
-				<input type="date" id="workStartDate" />
+				<input type="date" name="startDate" id="workStartDate" />
 				<label for="workEndDate">end date</label>
-				<input type="date" id="workEndDate" />
+				<input type="date" name="endDate" id="workEndDate" />
 				<label for="workSummary">summary</label>
-				<input type="text" id="workSummary" />
+				<input type="text" name="summary" id="workSummary" />
 				<label for="workHighlights">please give us a comma separated list of your duties / highlights</label>
-				<input type="text" id="workHighlights" />
+				<input type="text" name="highlights" id="workHighlights" />
 			</fieldset>
+            <button class="moreWork">add more work experience</button>
 			<fieldset class="volunteer" data-jsonSection="volunteer">
 				<label for="volunteerCompany">company</label>
 				<input type="text" id="volunteerCompany" />
@@ -115,27 +124,30 @@
 				<label for="skillName">skill</label>
 				<input type="text" id="skillName" />
 				<label for="level">skill level</label>
-                <input type="text" id="level" placeholder="ie. 'master'" />
-                <label for="skillKeywords">please give us a comma separated list of keywords involving this skill.</label>
+				<input type="text" id="level" placeholder="ie. 'master'" />
+				<label for="skillKeywords">please give us a comma separated list of keywords involving this skill.</label>
 			</fieldset>
 			<fieldset class="languages" data-jsonSection="languages">
 				<label for="language">language</label>
 				<input type="text" id="language" />
 				<label for="fluency">fluency</label>
 				<input type="text" id="fluency" />
-            </fieldset>
-            <fieldset class="interests" id="interests">
-                <label for="interestsName">name of interest</label>
-                <input type="text" id="interestsName">
-                <label for="interestsKeywords">please give us a comma separated list of keywords involving this interest.</label>
-            </fieldset>
-            <fieldset class="references" data-jsonSection="references">
-                <label for="referenceName">name</label>
-                <input type="text" id="referenceName">
-                <label for="reference">please paste the written reference below</label>
-<textarea name="reference" id="reference"></textarea>
-            </fieldset>
-            <button type="submit">save your information to a JSON file</button>
+			</fieldset>
+			<fieldset class="interests" id="interests">
+				<label for="interestsName">name of interest</label>
+				<input type="text" id="interestsName" />
+				<label for="interestsKeywords"
+					>please give us a comma separated list of keywords involving this interest.</label
+				>
+			</fieldset>
+			<fieldset class="references" data-jsonSection="references">
+				<label for="referenceName">name</label>
+				<input type="text" id="referenceName" />
+				<label for="reference">please paste the written reference below</label>
+				<textarea name="reference" id="reference"></textarea>
+			</fieldset>
+			<button type="submit">save your information to a JSON file</button>
 		</form>
+		<script src="script.js"></script>
 	</body>
 </html>
