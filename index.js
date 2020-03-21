@@ -72,7 +72,7 @@ function showCommands() {
                                 rl.question('\u001b[34;1mPlease select a field: name • label • picture • email • phone • summary • location\nEnter "main" to return to main menu\n\u001b[0m', field => {
                                     switch(field) {
                                         case 'name' || 'label' || 'picture' || 'email' || 'phone' || 'summary':
-                                            rl.question(`Enter ${field}:\n`, answer => {
+                                            rl.question(`\u001b[33;1mEnter ${field}:\n\u001b[0m`, answer => {
                                                 resume['basics'][field] = answer;
                                                 const fieldName = field[0].toUpperCase() + field.slice(1);
                                                 console.log(`\u001b[32;1m${fieldName} added successfully. 👏\n\u001b[0m`)
@@ -112,7 +112,7 @@ function showCommands() {
                                             showCommands();
                                             break;
                                         default:
-                                            console.log("Please enter a valid field.");
+                                            console.log('\u001b[31;1mPlease enter a valid field.\n\u001b[0m');
                                             getBasic();
                                     };
                                 });
@@ -125,22 +125,22 @@ function showCommands() {
 
                             const getCompany = answer => {
                                 job['company'] = answer;
-                                rl.question('Position?\n', getPosition);
+                                rl.question('\u001b[33;1mPosition?\n\u001b[0m', getPosition);
                             };
                             
                             const getPosition = answer => {
                                 job['position'] = answer;
-                                rl.question('Start Date?\n', getWorkStartDate);
+                                rl.question('\u001b[33;1mStart Date?\n\u001b[0m', getWorkStartDate);
                             };
 
                             const getWorkStartDate = answer => {
                                 job['startDate'] = answer;
-                                rl.question('End Date?\n', getWorkEndDate);
+                                rl.question('\u001b[33;1mEnd Date?\n\u001b[0m', getWorkEndDate);
                             };
 
                             const getWorkEndDate = answer => {
                                 job['endDate'] = answer;
-                                rl.question('Summary?\n', getSummary);
+                                rl.question('\u001b[33;1mSummary?\n\u001b[0m', getSummary);
                             };
 
                             const getSummary = answer => {
@@ -150,29 +150,29 @@ function showCommands() {
                                 showCommands();
                             };
 
-                            rl.question('Company?\n', getCompany);
+                            rl.question('\u001b[33;1mCompany?\n\u001b[0m', getCompany);
                             break;
                         case 'e':
                             let school = {};
 
                             const getInstitution = answer => {
                                 school['institution'] = answer;
-                                rl.question('Area?\n', getArea);
+                                rl.question('\u001b[33;1mArea?\n\u001b[0m', getArea);
                             };
 
                             const getArea = answer => {
                                 school['area'] = answer;
-                                rl.question('Study Type?\n', getStudyType);
+                                rl.question('\u001b[33;1mStudy Type?\n\u001b[0m', getStudyType);
                             };
 
                             const getStudyType = answer => {
                                 school['studyType'] = answer;
-                                rl.question('Start Date?\n', getEducationStartDate);
+                                rl.question('\u001b[33;1mStart Date?\n\u001b[0m', getEducationStartDate);
                             };
 
                             const getEducationStartDate = answer => {
                                 school['startDate'] = answer;
-                                rl.question('End Date?\n', getEducationEndDate);
+                                rl.question('\u001b[33;1mEnd Date?\n\u001b[0m', getEducationEndDate);
                             };
 
                             const getEducationEndDate = answer => {
@@ -182,14 +182,14 @@ function showCommands() {
                                 showCommands();
                             };
 
-                            rl.question('Institution?\n', getInstitution);
+                            rl.question('\u001b[33;1mInstitution?\n\u001b[0m', getInstitution);
                             break;
                         case 'l':
                             let language = {};
 
                             const getLanguage = answer => {
                                 language['language'] = answer;
-                                rl.question('Fluency?\n', getFluency);
+                                rl.question('\u001b[33;1mFluency?\n\u001b[0m', getFluency);
                             };
 
                             const getFluency = answer => {
@@ -199,19 +199,19 @@ function showCommands() {
                                 showCommands();
                             };
 
-                            rl.question('Language?\n', getLanguage);
+                            rl.question('\u001b[33;1mLanguage?\n\u001b[0m', getLanguage);
                             break;
                         case 's':
                             let skill = {};
                             
                             const getSkillName = answer => {
                                 skill['name'] = answer;
-                                rl.question('Level?\n', getLevel);
+                                rl.question('\u001b[33;1mLevel?\n\u001b[0m', getLevel);
                             };
 
                             const getLevel = answer => {
                                 skill['level'] = answer;
-                                rl.question('Enter keywords associated with skill separated by a comma.\n', getKeywords);
+                                rl.question('\u001b[33;1mEnter keywords associated with skill separated by a comma.\n\u001b[0m', getKeywords);
                             };
 
                             const getKeywords = answer => {
@@ -224,14 +224,14 @@ function showCommands() {
                                 showCommands();
                             };
 
-                            rl.question('Name?\n', getSkillName);
+                            rl.question('\u001b[33;1mName?\n\u001b[0m', getSkillName);
                             break;
                         case 'r':
                             let reference = {};
 
                             const getRefName = answer => {
                                 reference['name'] = answer;
-                                rl.question('Reference?\n', getReference);
+                                rl.question('\u001b[33;1mReference?\n\u001b[0m', getReference);
                             };
 
                             const getReference = answer => {
@@ -241,10 +241,10 @@ function showCommands() {
                                 showCommands();
                             };
 
-                            rl.question('Name?\n', getRefName);
+                            rl.question('\u001b[33;1mName?\n\u001b[0m', getRefName);
                             break;
                         default:
-                            console.log("Please enter a valid category.");
+                            console.log('\u001b[31;1mPlease enter a valid category.\u001b[0m');
                             getCategory();
                             break;
                     };
@@ -261,8 +261,8 @@ function showCommands() {
                         info.forEach(([key, value], index) => {
                             console.log(`[${index}] ${key}: ${value}`);
                         });
-                        rl.question('Enter index number.\n', number => {
-                            console.log('Deleted from basic information.');
+                        rl.question('\u001b[33;1mEnter index number.\n\u001b[0m', number => {
+                            console.log('\u001b[31;1mDeleted from basic information.\u001b[0m');
                             resume.basics[info[number][0]] = "";
                             showCommands();
                         });
@@ -270,8 +270,8 @@ function showCommands() {
                     case 'w':
                         resume.work.forEach((job, index) => {
                             console.log(`[${index}] ${job.company}`);
-                            rl.question('Enter index number.\n', number => {
-                                console.log('Deleted from work.');
+                            rl.question('\u001b[33;1mEnter index number.\n\u001b[0m', number => {
+                                console.log('\u001b[31;1mDeleted from work.\u001b[0m');
                                 resume.work.splice(number, number + 1);
                                 showCommands();
                             });
@@ -281,8 +281,8 @@ function showCommands() {
                     case 'e':
                         resume.education.forEach((school, index) => {
                             console.log(`[${index}] ${school.institution}`);
-                            rl.question('Enter index number.\n', number => {
-                                console.log('Deleted from education.');
+                            rl.question('\u001b[33;1mEnter index number.\n\u001b[0m', number => {
+                                console.log('\u001b[31;1mDeleted from education.\u001b[0m');
                                 resume.education.splice(number, number + 1);
                                 showCommands();
                             });
@@ -292,8 +292,8 @@ function showCommands() {
                     case 's':
                         resume.skills.forEach((skill, index) => {
                             console.log(`[${index}] ${skill.name}`);
-                            rl.question('Enter index number.\n', number => {
-                                console.log("Deleted from skills.");
+                            rl.question('\u001b[33;1mEnter index number.\n\u001b[0m', number => {
+                                console.log('\u001b[31;1mDeleted from skills.\u001b[0m');
                                 resume.skills.splice(number, number + 1);
                                 showCommands();
                             });
@@ -303,7 +303,7 @@ function showCommands() {
                 };
             };
 
-            rl.question('Which category?\n(b) Basics • (w) Work • (e) Education • (s) Skills\n', getCategory);
+            rl.question('\u001b[35;1mWhich category?\n(b) Basics • (w) Work • (e) Education • (s) Skills\n\u001b[0m', getCategory);
             showCommands();
         // Save resume to file
         } else if (answer === 's') {
@@ -314,15 +314,15 @@ function showCommands() {
                     console.error(err);
                     return;
                 }
-                console.log(`Saved "${fileName}" to disk`);
+                console.log(`\u001b[32;1mSuccessfully saved "${fileName}" to disk\u001b[0m.`);
                 showCommands();
             });
         // Quit
         } else if (answer === 'q') {
-            console.log('==============================\nThank you for using Resume Builder! 😄\n==============================');
+            console.log('========================================\nThank you for using Resume Builder! 😄\n========================================');
             rl.close();
         } else {
-            console.log('Please enter a valid command.');
+            console.log('\u001b[31;1mPlease enter a valid command.\u001b[0m');
             showCommands();
         };
     });
