@@ -9,7 +9,7 @@ export default function Form(props) {
   }
 
   return(
-    <form onSubmit={submitHandler}>
+    <form className="form" onSubmit={submitHandler}>
       {/* will flip between the different inputs */}
       <Basics/>
     </form>
