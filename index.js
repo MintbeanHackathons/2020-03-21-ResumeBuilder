@@ -46,7 +46,9 @@ function showCommands() {
         // View resume
         if (answer === 'v') {
             const categories = Object.entries(resume);
-            categories.forEach(category => console.log(category));
+            categories.forEach(category => {
+                Array.isArray(category) ? category.forEach(item => console.log(item)) : console.log(category);
+            });
             showCommands();
         // Add resume item
         } else if (answer === 'a') {
@@ -146,7 +148,8 @@ function showCommands() {
 
                             const getKeywords = answer => {
                                 const keywords = [];
-                                answer.forEach(keyword => keywords.push(keyword));
+                                const answerArr = answer.split(",");
+                                answerArr.forEach(keyword => keywords.push(keyword.trim()));
                                 skill['keywords'] = keywords;
                                 resume.skills.push(skill);
                                 showCommands();
