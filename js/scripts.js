@@ -76,6 +76,7 @@ builder.copy = (e) => {
     if (builder.output.value) {
         builder.output.select();
         document.execCommand('copy');
+        alert('Copied to clipboard!');
     } else {
         alert('Maybe you should build a JSON Resume first!');
     }
