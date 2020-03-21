@@ -5,10 +5,20 @@ class TestComponent extends Component {
     sayStuff: 'stuff'
   };
 
+  handleChange = (e) => {
+    this.setState({
+      sayStuff: e.target.value
+    })
+  }
+
   render() {
     return (
       <div>
-        <p>{this.state.sayStuff}</p>
+        <p>{JSON.stringify(this.state.sayStuff)}</p>
+        <form>
+          <input type="textarea" onChange={e => this.handleChange(e)}/>
+          <button type="submit">Submit</button>
+        </form>
       </div>
     );
   }
