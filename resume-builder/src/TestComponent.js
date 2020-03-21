@@ -102,17 +102,23 @@ class TestComponent extends Component {
 
 
   // programatically create input elements
-  // componentDidMount() {
-  //   for (let i=0; i < Object.keys(this.state.basics).length; i++) {
-  //     console.log(Object.keys(this.state.basics)[i])
-  //     let newInput = document.createElement("input")
-  //     let elementLabel = document.createElement("p")
-  //     elementLabel.innerText = Object.keys(this.state.basics)[i]
-  //     newInput.className = Object.keys(this.state.basics)[i]
-  //     document.querySelector('.basics').appendChild(elementLabel)
-  //     document.querySelector('.basics').appendChild(newInput)
-  //   }
-  // }
+  componentDidMount() {
+    for (let i=0; i < Object.keys(this.state.basics).length; i++) {
+      // make a new input element for the object key
+      let newInput = document.createElement("input")
+
+      // let the user know what the box will fill in
+      let elementLabel = document.createElement("p")
+      elementLabel.innerText = Object.keys(this.state.basics)[i]
+
+      // just in case I need to access it
+      newInput.className = Object.keys(this.state.basics)[i]
+
+      // add the label and input to DOM for Basics section
+      document.querySelector('.basics').appendChild(elementLabel)
+      document.querySelector('.basics').appendChild(newInput)
+    }
+  }
 
   // this is bad, wouldn't use in final implementation
   handleNameChange = e => {
