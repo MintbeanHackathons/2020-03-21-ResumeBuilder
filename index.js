@@ -19,7 +19,9 @@ let resume = {
       },
       "work": [],
       "education": [],
+      "languages": [],
       "skills": [],
+      "references": []
 };
 let fileName = 'resume.json';
 
@@ -36,8 +38,11 @@ if (process.argv[2]) {
 // Read .json file and add to resume
 fs.readFile(fileName, (err, data) => {
     if (typeof data !== 'undefined') {
-        resume = JSON.parse(data);
-    }
+        const fileContents = JSON.parse(data);
+        for (item in resume) {
+            if (fileContents[item]) resume[item] = fileContents[item];
+        };
+    };
 });
 
 function showCommands() {
@@ -53,7 +58,7 @@ function showCommands() {
         // Add resume item
         } else if (answer === 'a') {
             const getCategory = () => {
-                rl.question('(b) Basics • (w) Work • (e) Education • (s) Skills\n', category => {
+                rl.question('(b) Basics • (w) Work • (e) Education • (l) Languages • (s) Skills • (r) References\n', category => {
                     switch(category) {
                         case 'b':
                             const getBasic = () => {
@@ -62,7 +67,7 @@ function showCommands() {
                                     rl.question(`Enter ${field}:\n`, answer => {
                                         resume['basics'][field] = answer;
                                         const fieldName = field[0].toUpperCase() + field.slice(1);
-                                        console.log(`${fieldName} added successfully.`)
+                                        console.log(`${fieldName} added successfully. 👏`)
                                         showCommands();
                                     })
                                     : 
@@ -99,7 +104,7 @@ function showCommands() {
                             const getSummary = answer => {
                                 job['summary'] = answer;
                                 resume.work.push(job);
-                                console.log('Work experience added successfully.');
+                                console.log('Work experience added successfully. 👏');
                                 showCommands();
                             };
 
@@ -131,16 +136,33 @@ function showCommands() {
                             const getEducationEndDate = answer => {
                                 school['endDate'] = answer;
                                 resume.education.push(school);
-                                console.log('Education added successfully.');
+                                console.log('Education added successfully. 👏');
                                 showCommands();
                             };
 
                             rl.question('Institution?\n', getInstitution);
                             break;
+                        case 'l':
+                            let language = {};
+
+                            const getLanguage = answer => {
+                                language['language'] = answer;
+                                rl.question('Fluency?\n', getFluency);
+                            };
+
+                            const getFluency = answer => {
+                                language['fluency'] = answer;
+                                resume.languages.push(language);
+                                console.log('Language added successfully. 👏')
+                                showCommands();
+                            };
+
+                            rl.question('Language?\n', getLanguage);
+                            break;
                         case 's':
                             let skill = {};
                             
-                            const getName = answer => {
+                            const getSkillName = answer => {
                                 skill['name'] = answer;
                                 rl.question('Level?\n', getLevel);
                             };
@@ -156,11 +178,28 @@ function showCommands() {
                                 answerArr.forEach(keyword => keywords.push(keyword.trim()));
                                 skill['keywords'] = keywords;
                                 resume.skills.push(skill);
-                                console.log('Skill added successfully.');
+                                console.log('Skill added successfully. 👏');
                                 showCommands();
                             };
 
-                            rl.question('Name?\n', getName);
+                            rl.question('Name?\n', getSkillName);
+                            break;
+                        case 'r':
+                            let reference = {};
+
+                            const getRefName = answer => {
+                                reference['name'] = answer;
+                                rl.question('Reference?\n', getReference);
+                            };
+
+                            const getReference = answer => {
+                                reference['reference'] = answer;
+                                resume.references.push(reference);
+                                console.log('Reference added successfully. 👏');
+                                showCommands();
+                            };
+
+                            rl.question('Name?\n', getRefName);
                             break;
                         default:
                             console.log("Please enter a valid category.");
@@ -226,7 +265,7 @@ function showCommands() {
             showCommands();
         // Save resume to file
         } else if (answer === 's') {
-            const fileContents = JSON.stringify(resume);
+            fileContents = JSON.stringify(resume);
             
             fs.writeFile(fileName, fileContents, err => {
                 if (err) {
