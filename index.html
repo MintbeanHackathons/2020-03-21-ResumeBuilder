@@ -8,9 +8,12 @@
   </head>
 
   <body>
+    <section class="header">
     <div class="row">
       <h1>Build Your JSON Resume</h1>
     </div>
+  </section>
+  <section class="form">
     <div class="row">
       <form method="POST">
         <div class="row">
@@ -20,7 +23,7 @@
           <div class="col">
             <input id="name" name="name" type="text" />
           </div>
-        </div>
+        </div></br>
 
         <div class="row">
           <div class="col">
@@ -29,7 +32,7 @@
           <div class="col">
             <input id="image" name="image" type="file" />
           </div>
-        </div>
+        </div></br>
 
         <div class="row">
           <div class="col">
@@ -38,7 +41,7 @@
           <div class="col">
             <input id="email" name="email" type="email" />
           </div>
-        </div>
+        </div></br>
 
         <div class="row">
           <div class="col">
@@ -47,7 +50,7 @@
           <div class="col">
             <input id="phone" name="phone" type="tel" />
           </div>
-        </div>
+        </div></br>
 
         <div class="row">
           <div class="col">
@@ -56,7 +59,7 @@
           <div class="col">
             <input id="site" name="site" type="url" />
           </div>
-        </div>
+        </div></br>
 
         <div class="row">
           <div class="col">
@@ -69,7 +72,7 @@
               placeholder="Summarize who you are..."
             ></textarea>
           </div>
-        </div>
+        </div></br>
         <div class="row">
           <h2>Location</h2>
           <div class="col">
@@ -77,33 +80,33 @@
           </div>
           <div class="col">
             <input id="address" name="address" type="url" />
-          </div>
+          </div></br>
           <div class="col">
             <label for="city">City:</label>
           </div>
           <div class="col">
             <input id="city" name="city" type="url" />
-          </div>
+          </div></br>
           <div class="col">
             <label for="postalCode">Postal Code:</label>
           </div>
           <div class="col">
             <input id="postalCode" name="postalCode" type="url" />
-          </div>
+          </div></br>
 
           <div class="col">
             <label for="countryCode">Country Code:</label>
           </div>
           <div class="col">
             <input id="countryCode" name="countryCode" type="url" />
-          </div>
+          </div></br>
 
           <div class="col">
             <label for="region">Region:</label>
           </div>
           <div class="col">
             <input id="region" name="region" type="url" />
-          </div>
+          </div></br>
         </div>
         <div class="row">
           <h2>Profiles</h2>
@@ -116,7 +119,7 @@
               <option value="facebook">Facebook</option>
               <option value="linkedIn">LinkedIn </option>
             </select>
-          </div>
+          </div></br>
           <div class="col">
             <label for="username">Username:</label>
           </div>
@@ -129,7 +132,7 @@
           <div class="col">
             <input id="url" name="url" type="text" />
           </div>
-        </div>
+        </div></br>
 
         <div class="row">
           <h2>Work</h2>
@@ -175,7 +178,7 @@
               Add Work
             </a>
           </div>
-        </div>
+        </div></br>
         <div class="row">
           <h2>Education</h2>
           <div class="col">
@@ -236,12 +239,12 @@
             <label>&nbsp;</label>
           </div>
           <div class="col span-2-of-3">
-            <input type="submit" value="Send" />
+            <input id="send" type="submit" value="Send" />
           </div>
         </div>
-        <!-- </div> -->
-        <!-- </div> -->
       </form>
+    </section>
     </div>
+    <script src="./index.js" type="text/Javascript"></script>
   </body>
 </html>
