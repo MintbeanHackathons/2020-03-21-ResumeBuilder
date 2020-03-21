@@ -45,7 +45,9 @@ function showCommands() {
     rl.question(`(v) View • (a) Add • (d) Delete • (s) Save • (q) Quit\n`, answer => {
         // View resume
         if (answer === 'v') {
-            console.log(Object.entries(resume));
+            const categories = Object.entries(resume);
+            categories.forEach(category => console.log(category));
+            // console.log(Object.entries(resume));
             showCommands();
         // Add resume item
         } else if (answer === 'a') {
