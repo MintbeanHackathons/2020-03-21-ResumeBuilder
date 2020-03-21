@@ -47,7 +47,6 @@ function showCommands() {
         if (answer === 'v') {
             const categories = Object.entries(resume);
             categories.forEach(category => console.log(category));
-            // console.log(Object.entries(resume));
             showCommands();
         // Add resume item
         } else if (answer === 'a') {
@@ -166,7 +165,23 @@ function showCommands() {
             getCategory();
         // Delete item from resume
         } else if (answer === 'd') {
-    
+            const getCategory = category => {
+                switch(category) {
+                    case 'w':
+                        resume.work.forEach((job, index) => {
+                            console.log(`[${index}] ${job.company}`);
+                            rl.question('Enter index number.\n', number => {
+                                console.log("Deleted from work.");
+                                resume.work.splice(number, number + 1);
+                                showCommands();
+                            });
+                        });
+                        
+                        break;
+                };
+            };
+
+            rl.question('Which category?\n', getCategory);
             showCommands();
         // Save resume to file
         } else if (answer === 's') {
