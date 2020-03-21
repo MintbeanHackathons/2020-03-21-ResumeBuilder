@@ -1,0 +1,22 @@
+{
+  "name": "resumebuilder",
+  "version": "1.0.0",
+  "description": "CLI tool that outputs a resume.json file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/udugam/ResumeBuilder.git"
+  },
+  "author": "Ryan Udugampola",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/udugam/ResumeBuilder/issues"
+  },
+  "homepage": "https://github.com/udugam/ResumeBuilder#readme",
+  "dependencies": {
+    "inquirer": "^7.1.0"
+  }
+}
