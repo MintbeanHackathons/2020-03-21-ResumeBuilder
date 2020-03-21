@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Builder</title>
+  </head>
+  <body>
+    <form id="resume-form">
+      <!-- Basics -->
+      <div>
+        <label for="basics-name">Name:</label>
+        <input
+          type="text"
+          name="basics-name"
+          id="basics-name"
+          value="Jeremy"
+          placeholder="Full Name"
+        />
+      </div>
+      <div>
+        <label for="basics-label">Label:</label>
+        <input
+          type="text"
+          name="basics-label"
+          id="basics-label"
+          value="Web Developer"
+          placeholder="Label"
+        />
+
+        <!-- Low on time, would never do this :) -->
+        <br /><br />
+
+        <!-- Basics -> Social Media Profiles -->
+        <label for="basics-profiles-network">Social Media Network:</label>
+        <input
+          type="text"
+          name="basics-profiles-network"
+          id="basics-profiles-network"
+          value="Twitter"
+          placeholder="Social Media Network"
+        />
+        <br />
+        <label for="basics-profiles-user">User Name:</label>
+        <input
+          type="text"
+          name="basics-profiles-user"
+          id="basics-profiles-user"
+          value="@jeremy"
+          placeholder="User Name"
+        />
+        <br />
+        <label for="basics-profiles-url">Url:</label>
+        <input
+          type="text"
+          name="basics-profiles-url"
+          id="basics-profiles-url"
+          value="http://www.twitter.com/notreal/"
+          placeholder="User Name"
+        />
+        <br />
+        <button id="add-profile">Add Social Network</button>
+      </div>
+
+      <br /><br />
+      <!-- Work -->
+      <input type="submit" value="Save Resume to JSON" />
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./scripts/resume.js"></script>
+  </body>
+</html>
