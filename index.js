@@ -170,11 +170,22 @@ function showCommands() {
         } else if (answer === 'd') {
             const getCategory = category => {
                 switch(category) {
+                    case 'b':
+                        const info = Object.entries(resume.basics);
+                        info.forEach(([key, value], index) => {
+                            console.log(`[${index}] ${key}: ${value}`);
+                        });
+                        rl.question('Enter index number.\n', number => {
+                            console.log('Deleted from basic information.');
+                            resume.basics[info[number][0]] = "";
+                            showCommands();
+                        });
+                        break;
                     case 'w':
                         resume.work.forEach((job, index) => {
                             console.log(`[${index}] ${job.company}`);
                             rl.question('Enter index number.\n', number => {
-                                console.log("Deleted from work.");
+                                console.log('Deleted from work.');
                                 resume.work.splice(number, number + 1);
                                 showCommands();
                             });
@@ -185,7 +196,7 @@ function showCommands() {
                         resume.education.forEach((school, index) => {
                             console.log(`[${index}] ${school.institution}`);
                             rl.question('Enter index number.\n', number => {
-                                console.log("Deleted from education.");
+                                console.log('Deleted from education.');
                                 resume.education.splice(number, number + 1);
                                 showCommands();
                             });
