@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON Resume</title>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+  </head>
+
+  <body>
+    <div class="row">
+      <h1>Build Your JSON Resume</h1>
+    </div>
+    <div class="row">
+      <form method="POST">
+        <div class="row">
+          <div class="col">
+            <label for="name">Name:</label>
+          </div>
+          <div class="col">
+            <input id="name" name="name" type="text" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="image">Picture:</label>
+          </div>
+          <div class="col">
+            <input id="image" name="image" type="file" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="email">Email:</label>
+          </div>
+          <div class="col">
+            <input id="email" name="email" type="email" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="phone">Phone:</label>
+          </div>
+          <div class="col">
+            <input id="phone" name="phone" type="tel" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="site"> Website:</label>
+          </div>
+          <div class="col">
+            <input id="site" name="site" type="url" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="summary"> Summary:</label>
+          </div>
+          <div class="col">
+            <textarea
+              id="summary"
+              name="summary"
+              placeholder="Summarize who you are..."
+            ></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <h2>Location</h2>
+          <div class="col">
+            <label for="address">Address:</label>
+          </div>
+          <div class="col">
+            <input id="address" name="address" type="url" />
+          </div>
+          <div class="col">
+            <label for="city">City:</label>
+          </div>
+          <div class="col">
+            <input id="city" name="city" type="url" />
+          </div>
+          <div class="col">
+            <label for="postalCode">Postal Code:</label>
+          </div>
+          <div class="col">
+            <input id="postalCode" name="postalCode" type="url" />
+          </div>
+
+          <div class="col">
+            <label for="countryCode">Country Code:</label>
+          </div>
+          <div class="col">
+            <input id="countryCode" name="countryCode" type="url" />
+          </div>
+
+          <div class="col">
+            <label for="region">Region:</label>
+          </div>
+          <div class="col">
+            <input id="region" name="region" type="url" />
+          </div>
+        </div>
+        <div class="row">
+          <h2>Profiles</h2>
+          <div class="col">
+            <label for="network">Network:</label>
+          </div>
+          <div class="col">
+            <select name="network" id="network">
+              <option value="twitter" selected>Twitter</option>
+              <option value="facebook">Facebook</option>
+              <option value="linkedIn">LinkedIn </option>
+            </select>
+          </div>
+          <div class="col">
+            <label for="username">Username:</label>
+          </div>
+          <div class="col">
+            <input id="username" name="username" type="text" />
+          </div>
+          <div class="col">
+            <label for="url">Url:</label>
+          </div>
+          <div class="col">
+            <input id="url" name="url" type="text" />
+          </div>
+        </div>
+
+        <div class="row">
+          <h2>Work</h2>
+          <div class="col">
+            <label for="company">Company:</label>
+          </div>
+          <div class="col">
+            <input id="company" name="company" type="text" />
+          </div>
+          <div class="col">
+            <label for="position">Position:</label>
+          </div>
+          <div class="col">
+            <input id="position" name="position" type="text" />
+          </div>
+          <div class="col">
+            <label for="website">Website:</label>
+          </div>
+          <div class="col">
+            <input id="website" name="website" type="url" />
+          </div>
+          <div class="col">
+            <label for="startDate">start Date:</label>
+          </div>
+          <div class="col">
+            <input id="startDate" name="startDate" type="date" />
+          </div>
+          <div class="col">
+            <label for="endDate">End Date:</label>
+          </div>
+          <div class="col">
+            <input id="endDate" name="endDate" type="date" />
+          </div>
+          <div class="col">
+            <label></label>
+          </div>
+          <div class="col">
+            <a
+              href="#"
+              class="add-work-button"
+              alt="click to add additional work details"
+            >
+              Add Work
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <h2>Education</h2>
+          <div class="col">
+            <label for="institution">Institution:</label>
+          </div>
+          <div class="col">
+            <input id="institution" name="institution" type="text" />
+          </div>
+          <div class="col">
+            <label for="area">area:</label>
+          </div>
+          <div class="col">
+            <input id="area" name="area" type="text" />
+          </div>
+
+          <div class="col">
+            <label for="courseStartDate">Start Date:</label>
+          </div>
+          <div class="col">
+            <input id="courseStartDate" name="courseStartDate" type="date" />
+          </div>
+
+          <div class="col">
+            <label for="courseEndDate">End Date:</label>
+          </div>
+          <div class="col">
+            <input id="courseEndDate" name="courseEndDate" type="date" />
+          </div>
+          <div class="col">
+            <label>&nbsp;</label>
+          </div>
+          <div class="col">
+            <a
+              href="#"
+              class="add-work-button"
+              alt="click to add additional work details"
+              >Add Education</a
+            >
+          </div>
+        </div>
+
+        <div class="row">
+          <h2>Skills</h2>
+          <div class="col">
+            <label for="skills">skills:</label>
+          </div>
+          <div class="col">
+            <textarea
+              id="skills"
+              name="skills"
+              placeholder="Add skills seperated with comma..."
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col span-1-of-3">
+            <label>&nbsp;</label>
+          </div>
+          <div class="col span-2-of-3">
+            <input type="submit" value="Send" />
+          </div>
+        </div>
+        <!-- </div> -->
+        <!-- </div> -->
+      </form>
+    </div>
+  </body>
+</html>
