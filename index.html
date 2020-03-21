@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body class="wrapper">
+    <header>
+        <h1>JSON Resume Builder</h1>
+    </header>
+    <main>
+        <section class="builder">
+            <form class="builderTemplate">
+                <label for="userInput">Complete template below:</label>
+                <textarea name="userInput" id="userInput"></textarea>
+                <button class="reset">Reset template!</button>
+                <button class="build">Build JSON Resume!</button>
+            </form>
+            <form class="builderComplete">
+                <label for="builderOutput">Access JSON Resume below:</label>
+                <textarea name="builderOutput" id="builderOutput"></textarea>
+                <button class="clipboard">Copy to clipboard</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Built for a Mintbean Hackathon</p>
+    </footer>
+    <script src="./js/scripts.js"></script>
+</body>
+
+</html>
