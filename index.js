@@ -178,6 +178,17 @@ function showCommands() {
                         });
                         
                         break;
+                    case 'e':
+                        resume.work.forEach((school, index) => {
+                            console.log(`[${index}] ${school.institution}`);
+                            rl.question('Enter index number.\n', number => {
+                                console.log("Deleted from education.");
+                                resume.education.splice(number, number + 1);
+                                showCommands();
+                            });
+                        });
+                        
+                        break;
                 };
             };
 
