@@ -127,6 +127,7 @@ builder.getDOM = () => {
     builder.copyButton = document.querySelector('.clipboard');
     builder.dlButton = document.querySelector('.download');
     builder.input = document.querySelector('#userInput');
+    builder.output = document.querySelector('#builderOutput');
 }
 
 builder.listenUp = () => {
@@ -155,16 +156,29 @@ builder.build = (e) => {
     // prevent submit
     e.preventDefault();
     // build json resume
+    // lacking data handling here for errors
+    builder.output.value = builder.input.value;
+    // user confirmation
+    alert('Successful build!');
 }
 
+//adapted from https://hackernoon.com/copying-text-to-clipboard-with-javascript-df4d4988697f
 builder.copy = (e) => {
     // prevent submit
     e.preventDefault();
-    // copy json resume
+    // copy json resume, validate first if there's user output available
+    if (builder.output.value) {
+        builder.output.select();
+        document.execCommand('copy');
+    } else {
+        alert('Maybe you should build a JSON Resume first!');
+    }
 }
 
 builder.download = (e) => {
     // prevent submit
     e.preventDefault();
     // download json resume
+    // convert string back into json object
+    const jsonObj = JSON.parse(builder.output.value);
 }
