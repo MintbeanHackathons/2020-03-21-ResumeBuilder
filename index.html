@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Builder</title>
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <form id="resume-form" method="post">
+    <div>
+      <label for="title">Name</label>
+      <input name="name" id="name" type="text" >
+    </div>
+    <div>
+      <label for="label">Label</label>
+      <input name="label" id="label" type="text" >
+    </div>
+    <div>
+      <label for="picture">Picture</label>
+      <input name="picture" id="picture" type="file" >
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input name="email" id="email" type="email" >
+    </div>
+    <div>
+      <label for="phone">Phone</label>
+      <input name="phone" id="phone" type="text" >
+    </div>
+    <div>
+      <label for="website">Website:</label>
+      <input name="website" id="website" type="text" >
+    </div>
+    <div>
+      <label for="summary">Summary:</label>
+        <textarea name="summary" id="summary"></textarea>
+    </div>
+    <div>
+      <label for="address">Address:</label>
+      <input name="address" id="address" type="text" >
+    </div>
+    <div>
+      <label for="postal-code">Postal-code:</label>
+      <input name="postal-code" id="postal-code" type="text" >
+    </div>
+    <div>
+      <label for="city">City:</label>
+      <input name="city" id="city" type="text" >
+    </div>
+    <div>
+      <label for="country">Country:</label>
+      <input name="country" id="country" type="text" >
+    </div>
+    <div>
+      <label for="region">Region:</label>
+      <input name="region" id="region" type="text" >
+    </div>
+    <span>Profiles<span><button id="add-profile">+</button><button>-</button>
+    <div id="profiles"></div>
+    
+  <p><input type="submit" /></p>
+  </form>
+
+  <h2>Your JSON Resume Schema:</h2>
+  <pre id="schema"></pre>
+</body>
+</html>
