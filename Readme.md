@@ -1,3 +1,8 @@
+# Jason Huang's Resume Builder
+The app uses BEM naming convention for CSS classes
+
+The output of JSON follows the schema on https://jsonresume.org/schema/
+
 # Today's Objective: Hack the Résumé
 
 Tip: Read [General Information.md]("./General Information.md") for more info on how to get started and submit.
