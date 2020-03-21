@@ -1,7 +1,7 @@
 var form = document.getElementById('myForm');
 form.onsubmit=function(e){
     e.preventDefault();
-    console.log(form.name);
+    console.log(form.name.value);
 };
 var myObj, myJSON, text, obj;
 
