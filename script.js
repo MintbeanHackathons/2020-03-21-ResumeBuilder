@@ -1,8 +1,14 @@
 var form = document.getElementById('myForm');
+
 form.onsubmit=function(e){
     e.preventDefault();
+    var result= document.getElementById("demo");
+    result.innerHTML= 'Hi '+form.name.value;
+    form.reset();
     console.log(form.name.value);
 };
+
+
 var myObj, myJSON, text, obj;
 
 // Storing data:
