@@ -1,0 +1,28 @@
+.input-container{
+
+}
+
+.label{
+
+}
+
+.input{
+  margin: 6px 10px;
+  padding-bottom: 5px;
+  padding-left:10px ;
+  height: 40px;
+  width: 250px;
+  font-size: 1.4rem;
+  outline: none;
+}
+
+input[type="submit"] {
+  margin: 10px 0;
+  background: rgba(201, 201, 201, 0);
+}
+
+.input:hover{
+  background-color: rgb(169, 169, 255);
+  color: rgb(177, 0, 0);
+  outline: none;
+}
