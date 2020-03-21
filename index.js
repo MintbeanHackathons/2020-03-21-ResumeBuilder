@@ -61,6 +61,8 @@ function showCommands() {
                                     field === 'name' || field === 'label' || field === 'picture' || field === 'email' || field === 'phone' || field === 'summary' ? 
                                     rl.question(`Enter ${field}:\n`, answer => {
                                         resume['basics'][field] = answer;
+                                        const fieldName = field[0].toUpperCase() + field.slice(1);
+                                        console.log(`${fieldName} added successfully.`)
                                         showCommands();
                                     })
                                     : 
@@ -97,6 +99,7 @@ function showCommands() {
                             const getSummary = answer => {
                                 job['summary'] = answer;
                                 resume.work.push(job);
+                                console.log('Work experience added successfully.');
                                 showCommands();
                             };
 
@@ -121,13 +124,14 @@ function showCommands() {
                             };
 
                             const getEducationStartDate = answer => {
-                                job['startDate'] = answer;
+                                school['startDate'] = answer;
                                 rl.question('End Date?\n', getEducationEndDate);
                             };
 
                             const getEducationEndDate = answer => {
-                                job['endDate'] = answer;
+                                school['endDate'] = answer;
                                 resume.education.push(school);
+                                console.log('Education added successfully.');
                                 showCommands();
                             };
 
@@ -152,6 +156,7 @@ function showCommands() {
                                 answerArr.forEach(keyword => keywords.push(keyword.trim()));
                                 skill['keywords'] = keywords;
                                 resume.skills.push(skill);
+                                console.log('Skill added successfully.');
                                 showCommands();
                             };
 
