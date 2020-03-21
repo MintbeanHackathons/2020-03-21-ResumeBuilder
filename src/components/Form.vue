@@ -1,6 +1,6 @@
 <template lang="pug">
   div
-    b-form(@submit="onSubmit" @reset="onReset" v-if="showForm")
+    b-form(v-on:submit.prevent="onSubmit" @submit="onSubmit" @reset="onReset" v-if="showForm")
       b-form-group(
         id="input-group-basics"
         label="Basics:")
@@ -80,7 +80,7 @@
           id="input-group-work"
           label="Work:")
           .row(
-            v-for="(work, index) in form.work")
+            v-for="(work, iWork) in form.work")
             b-form-input(
               v-model="work.company"
               type="text"  
@@ -105,6 +105,19 @@
               v-model="work.summary"
               type="text"  
               placeholder="Enter summary")
+
+            b-form-group(
+              id="input-group-work"
+              label="Highlights:")
+              .row(
+                v-for="(highlight, index) in work.highlights")
+                b-form-input(
+                  v-model="work.highlights[index]"
+                  type="text"  
+                  placeholder="Enter highlight")
+                button(@click="removeHighlight(index)") Remove Highlight
+              .row
+                button(@click="addHighlight(iWork)") Add Highlight
 
             button(@click="removeWork(index)") Remove Work
           .row
@@ -235,13 +248,15 @@ export default {
       this.showForm = false;
     },
     onReset() {},
-    addProfile() {
+    addProfile(evt) {
+      evt.preventDefault();
       this.form.basics.profiles.push({ network: "", username: "", url: "" });
     },
     removeProfile(index) {
       this.form.basics.profiles.splice(index, 1);
     },
-    addWork() {
+    addWork(evt) {
+      evt.preventDefault();
       this.form.work.push({
         company: "",
         position: "",
@@ -253,6 +268,13 @@ export default {
     },
     removeWork(index) {
       this.form.work.splice(index, 1);
+    },
+    addHighlight(index) {
+      //Stopped working here
+      this.form.work[index].highlights.push();
+    },
+    removeHighlight(index) {
+      this.form.work.highlights.splice(index, 1);
     }
   },
   computed: {
