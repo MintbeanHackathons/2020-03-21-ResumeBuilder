@@ -8,7 +8,11 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "bootstrap": "^4.4.1",
+    "bootstrap-vue": "^2.7.0",
     "core-js": "^3.6.4",
+    "pug": "^2.0.4",
+    "pug-plain-loader": "^1.0.0",
     "vue": "^2.6.11",
     "vue-pug": "^4.0.0"
   },
