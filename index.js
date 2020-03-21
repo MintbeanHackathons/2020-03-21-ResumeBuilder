@@ -189,6 +189,17 @@ function showCommands() {
                         });
                         
                         break;
+                    case 's':
+                        resume.skills.forEach((skill, index) => {
+                            console.log(`[${index}] ${skill.name}`);
+                            rl.question('Enter index number.\n', number => {
+                                console.log("Deleted from skills.");
+                                resume.skill.splice(number, number + 1);
+                                showCommands();
+                            });
+                        });
+                        
+                        break;
                 };
             };
 
