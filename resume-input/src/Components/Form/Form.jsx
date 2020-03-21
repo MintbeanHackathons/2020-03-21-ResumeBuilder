@@ -1,14 +1,14 @@
 import React from 'react';
 import './form.scss';
-
+import Basics from '../Basics/Basics';
 
 export default function Form(props) {
 
-  const {urlSubmit, urlResult, stat, forwardedRef, statToggle} = props
 
   return(
-    <div>
-      <p>hi</p>
-    </div>
+    <form>
+      {/* will flip between the different inputs */}
+      <Basics/>
+    </form>
   )
 }

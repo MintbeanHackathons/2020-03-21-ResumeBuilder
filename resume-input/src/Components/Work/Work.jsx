@@ -2,9 +2,7 @@ import React from 'react';
 import './form.scss';
 
 
-export default function Form(props) {
-
-  const {urlSubmit, urlResult, stat, forwardedRef, statToggle} = props
+export default function Work(props) {
 
   return(
     <div>

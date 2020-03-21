@@ -5,7 +5,7 @@ import Form from './Components/Form/Form';
 
 function App() {
   return (
-    <section>
+    <section className="Form">
       <Form></Form>
     </section>
   );
