@@ -67,6 +67,7 @@ function showCommands() {
             const getCategory = () => {
                 rl.question('\u001b[35;1m(b) Basics • (w) Work • (e) Education • (l) Languages • (s) Skills • (r) References\n\u001b[0m', category => {
                     switch(category) {
+                        // Add to Basics
                         case 'b':
                             const getBasic = () => {
                                 rl.question('\u001b[34;1mPlease select a field: name • label • picture • email • phone • summary • location\nEnter "main" to return to main menu\n\u001b[0m', field => {
@@ -120,6 +121,7 @@ function showCommands() {
                             
                             getBasic();
                             break;
+                        // Add to Work
                         case 'w':
                             let job = {};
 
@@ -152,6 +154,7 @@ function showCommands() {
 
                             rl.question('\u001b[33;1mCompany?\n\u001b[0m', getCompany);
                             break;
+                        // Add to Education
                         case 'e':
                             let school = {};
 
@@ -184,6 +187,7 @@ function showCommands() {
 
                             rl.question('\u001b[33;1mInstitution?\n\u001b[0m', getInstitution);
                             break;
+                        // Add to Languages
                         case 'l':
                             let language = {};
 
@@ -201,6 +205,7 @@ function showCommands() {
 
                             rl.question('\u001b[33;1mLanguage?\n\u001b[0m', getLanguage);
                             break;
+                        // Add to Skills
                         case 's':
                             let skill = {};
                             
@@ -226,6 +231,7 @@ function showCommands() {
 
                             rl.question('\u001b[33;1mName?\n\u001b[0m', getSkillName);
                             break;
+                        // Add to References
                         case 'r':
                             let reference = {};
 
@@ -256,6 +262,7 @@ function showCommands() {
         } else if (answer === 'd') {
             const getCategory = category => {
                 switch(category) {
+                    // Delete from Basics
                     case 'b':
                         const info = Object.entries(resume.basics);
                         info.forEach(([key, value], index) => {
@@ -268,6 +275,7 @@ function showCommands() {
                             showCommands();
                         });
                         break;
+                    // Delete from Work
                     case 'w':
                         resume.work.forEach((job, index) => {
                             console.log(`[${index}] ${job.company}`);
@@ -279,6 +287,7 @@ function showCommands() {
                         });
                         
                         break;
+                    // Delete from Education
                     case 'e':
                         resume.education.forEach((school, index) => {
                             console.log(`[${index}] ${school.institution}`);
@@ -291,6 +300,7 @@ function showCommands() {
                         });
                         
                         break;
+                    // Delete from Skills
                     case 's':
                         resume.skills.forEach((skill, index) => {
                             console.log(`[${index}] ${skill.name}`);
