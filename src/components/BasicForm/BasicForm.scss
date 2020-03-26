@@ -155,14 +155,14 @@
         width: 30%;
     }}
    
-    &__title {
+    &__form-title {
         display: flex;
         flex-direction: row;
         margin-bottom: 10px;
     }
     
     @media screen and (max-width: 767px) {
-    &__title {
+    &__form-title {
         display: flex;
         flex-direction: column;
         margin-bottom: 10px;
@@ -212,7 +212,7 @@
         width: 30%;
     }}
 
-    &__telephone {
+    &__form-telephone {
         display: flex;
         flex-direction: row;
         margin-bottom: 10px;
@@ -244,14 +244,14 @@
         }}
     
 
-    &__website {
+    &__form-website {
         display: flex;
         flex-direction: row;
         margin-bottom: 10px;
     }
     
     @media screen and (max-width: 767px) {
-    &__website {
+    &__form-website {
         display: flex;
         flex-direction: column;
         margin-bottom: 10px;
@@ -409,7 +409,7 @@
             width: 30%;
             }}
             
-    &__twitter {
+    &__form-twitter {
         display: flex;
         flex-direction: row;
         margin-bottom: 10px;
@@ -439,38 +439,68 @@
             float: left;
             width: 30%;
         }}
-        &__github {
+        &__form-github {
             display: flex;
             flex-direction: row;
             margin-bottom: 10px;
         }
         
     
-        @media screen and (min-width: 768px) {
-            &__github-label {
-                font-size: larger;
-                float:left;
-                width: 35%;
-                text-align:right;
-                margin-right:15px;
-            }}
-        
-        
-        @media screen and (min-width: 768px) {
-            &__github-field {   
-                display: block;
-                box-sizing: border-box;
-                border: 1px black solid;
-                border-radius: 5px;
-                height: 25px;
-                font-size: large;
-                background-color: lightyellow;
-                margin-right: 20%;
-                float: left;
-                width: 30%;
-            }}
+    @media screen and (min-width: 768px) {
+        &__github-label {
+            font-size: larger;
+            float:left;
+            width: 35%;
+            text-align:right;
+            margin-right:15px;
+        }}
     
     
+    @media screen and (min-width: 768px) {
+        &__github-field {   
+            display: block;
+            box-sizing: border-box;
+            border: 1px black solid;
+            border-radius: 5px;
+            height: 25px;
+            font-size: large;
+            background-color: lightyellow;
+            margin-right: 20%;
+            float: left;
+            width: 30%;
+        }}
+
+    &__form-stack {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10px;
+    }
+        
+
+    @media screen and (min-width: 768px) {
+        &__stack-label {
+            font-size: larger;
+            float:left;
+            width: 35%;
+            text-align:right;
+            margin-right:15px;
+        }}
+
+
+    @media screen and (min-width: 768px) {
+        &__stack-field {   
+            display: block;
+            box-sizing: border-box;
+            border: 1px black solid;
+            border-radius: 5px;
+            height: 25px;
+            font-size: large;
+            background-color: lightyellow;
+            margin-right: 20%;
+            float: left;
+            width: 30%;
+        }}
+
 
 
     

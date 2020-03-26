@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 
 
 // import styling 
-import './ContactForm.scss';
+import './BasicForm.scss';
 
 //import application components
 
-export default class ContactUs extends Component {
+export default class BasicForm extends Component {
 
     buildJSON(e) {
         e.preventDefault();
@@ -21,6 +21,26 @@ export default class ContactUs extends Component {
         let jsonTelephone = e.target.userTelephone.value;
         let jsonTwitter = e.target.userTwitter.value;
         let jsonGithub = e.target.userGithub.value;
+        let jsonStack = e.target.userStack.value;
+
+        // // init db
+        // let db;
+        // window.onload = function() {
+        //     let request = window.indexedDB.open('resume_db', 1);
+        //     // when things go wrong .. let me know
+        //     request.onerror = function() {
+        //         console.log('Database failed to open');
+        //     };
+        //     // when things go right .. I need to know
+        //     request.onsuccess = function () {
+        //         console.log('Database opened successfully');
+        //     };
+        //     // store the opened database object in the db variable.
+        //     db = request.result;
+        //     // what's in the db right now;
+        //     displayData();
+        // };
+
 
         let output = {
             "basics": {
@@ -38,10 +58,17 @@ export default class ContactUs extends Component {
                 "profiles": [{
                     "network": "Twitter",
                     "username": jsonTwitter,
+                    "url": `www.twitter.com/${jsonTwitter}`
                 },
-                    {
-                        "network": "Github",
-                        "username": jsonGithub
+                {
+                    "network": "Github",
+                    "username": jsonGithub,
+                    "url": `www.github.com/${jsonGithub}`
+                },
+                {
+                    "network": "Stackoverflow",
+                    "username": jsonStack,
+                    "url": `www.stackoverflow.com/${jsonStack}`
                 }]
             }
         }
@@ -53,7 +80,7 @@ export default class ContactUs extends Component {
             <>
                 <form className="contact__form" id="inputCapture" onSubmit={this.buildJSON}>   
                     <section className="contact__intro">
-                        <h1>Resume JSON Builder</h1>
+                        <h1>Resume Builder - Contact Info</h1>
                     </section>
                     <div className="contact__form-name">
                         <label className="contact__name-label" htmlFor="name">Enter your name:</label>
@@ -85,15 +112,7 @@ export default class ContactUs extends Component {
                         <label className="contact__telephone-label" htmlFor="telephone">Enter your telephone number:</label>
                         <input className="contact__telephone-field" type="number" name="telephone" id="userTelephone" required/>
                     </div>
-                    <div className="contact__form-twitter">
-                        <label className="contact__twitter-label" htmlFor="twitter">Enter your Twitter userid:</label>
-                        <input className="contact__twitter-field" type="text" name="twitter" id="userTwitter" required/>
-                    </div>
-                    <div className="contact__form-github">
-                        <label className="contact__github-label" htmlFor="github">Enter your Github username:</label>
-                        <input className="contact__github-field" type="text" name="github" id="userGithub" required/>
-                    </div>
-                    <button className="contact__button" name="contact-button">Build JSON file</button>
+                    <button className="contact__button" name="contact-button">Save Changes</button>
                 </form>
             </>
         );

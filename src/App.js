@@ -3,7 +3,9 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import {Helmet} from 'react-helmet';
 
 // import application components
-import ContactForm from "./ContactForm/ContactForm";
+import BasicForm from "./components/BasicForm/BasicForm";
+import HomePage from "./components/HomePage/HomePage";
+import LinkForm from "./components/LinkForm/LinkForm";
 
 export default class App extends React.Component {
 
@@ -16,7 +18,10 @@ export default class App extends React.Component {
         </Helmet>
         <BrowserRouter>
           <Switch>
-            <Route path='/' exact component={ContactForm} />
+            <Route path='/' exact component={HomePage} />
+            <Route path='/BasicForm' component={BasicForm} />
+            <Route path='/LinkForm' component={LinkForm} />
+
           </Switch>
         </BrowserRouter>
       </>
