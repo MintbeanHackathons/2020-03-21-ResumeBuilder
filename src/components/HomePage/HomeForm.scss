@@ -5,6 +5,9 @@
     //             linear-gradient(336deg, rgba(243, 80, 4, 0.8), rgba(25, 83, 150, 0.8) 70.71%); 
     // margin-top: -40px;
 
+    background-image: url('./background-home.jpg');
+    color: white;
+    font-style: bold;
     
     &__title {
         font-size: 3rem;
@@ -25,9 +28,9 @@
     }
 
     &__item-label {
-        font-size: larger;
+        font-size: 30px;
         float: left;
-        width: 35%;
+        width: 25%;
         text-align: right;
         margin-right: 15px;
         margin-top: 20px;

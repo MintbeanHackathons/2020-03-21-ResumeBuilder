@@ -60,7 +60,7 @@ export default class Homepage extends Component {
 
     render() {
         return (
-            <>
+            <section className="resume">
                 <h1 className="resume__title">Resume Builder</h1>
                 <div className="resume__item">
                     <label className="resume__item-label">Contact Information</label>
@@ -104,7 +104,7 @@ export default class Homepage extends Component {
                     <label className="resume__item-label">References</label>
                     <button className="resume__button" name="resume-button">References</button>
                 </div>    
-            </>
+            </section>
         );
     }
 }
