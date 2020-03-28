@@ -9,6 +9,10 @@ ReactDOM.render(
       href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
       rel="stylesheet"
     ></link>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
   </React.StrictMode>,
   document.getElementById("root")
 );
