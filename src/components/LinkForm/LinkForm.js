@@ -58,26 +58,26 @@ export default class LinkForm extends Component {
 
     render() {
         return (
-            <>
-                <form className="contact__form" id="inputCapture" onSubmit={this.buildJSON}>   
-                    <section className="contact__intro">
+            <section className="links">
+                <form className="links__form" id="inputCapture" onSubmit={this.buildJSON}>   
+                    <section className="links__intro">
                         <h1>Resume Builder - Social Media Links</h1>
                     </section>
-                    <div className="contact__form-twitter">
-                        <label className="contact__twitter-label" htmlFor="twitter">Enter your Twitter userid:</label>
-                        <input className="contact__twitter-field" type="text" name="twitter" id="userTwitter" required/>
+                    <div className="links__form-twitter">
+                        <label className="links__twitter-label" htmlFor="twitter">Enter your Twitter userid:</label>
+                        <input className="links__twitter-field" type="text" name="twitter" id="userTwitter" required/>
                     </div>
-                    <div className="contact__form-github">
-                        <label className="contact__github-label" htmlFor="github">Enter your Github username:</label>
-                        <input className="contact__github-field" type="text" name="github" id="userGithub" required/>
+                    <div className="links__form-github">
+                        <label className="links__github-label" htmlFor="github">Enter your Github username:</label>
+                        <input className="links__github-field" type="text" name="github" id="userGithub" required/>
                     </div>
-                    <div className="contact__form-stack">
-                        <label className="contact__stack-label" htmlFor="stack">Enter your Stack Overflow username:</label>
-                        <input className="contact__stack-field" type="text" name="stack" id="userStack" required/>
+                    <div className="links__form-stack">
+                        <label className="links__stack-label" htmlFor="stack">Enter your Stack Overflow username:</label>
+                        <input className="links__stack-field" type="text" name="stack" id="userStack" required/>
                     </div>
-                    <button className="contact__button" name="contact-button">Save Changes</button>
+                    <button className="links__button" name="links-button">Save Changes</button>
                 </form>
-            </>
+            </section>
         );
     }
 }

@@ -1,9 +1,16 @@
-.contact {
+.links {
 
     // background: linear-gradient(217deg, rgba(203, 210, 218, 0.747), rgba(60, 99, 228, 0) 70.71%), 
     //             linear-gradient(127deg, rgba(25, 83, 150, 0.8), rgb(33, 157, 105) 70.71%), 
     //             linear-gradient(336deg, rgba(243, 80, 4, 0.8), rgba(25, 83, 150, 0.8) 70.71%); 
     // margin-top: -40px;
+
+    background-image: url('../images/links-background.jpg');
+    background-size: cover;
+    color: midnightblue;
+    font-style: bold;
+    height: 60vw;
+    
 
     @media screen and (max-width: 1023px) { 
     &__title {

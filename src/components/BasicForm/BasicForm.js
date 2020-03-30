@@ -77,7 +77,7 @@ export default class BasicForm extends Component {
 
     render() {
         return (
-            <>
+            <section className="contact">
                 <form className="contact__form" id="inputCapture" onSubmit={this.buildJSON}>   
                     <section className="contact__intro">
                         <h1>Resume Builder - Contact Info</h1>
@@ -114,7 +114,7 @@ export default class BasicForm extends Component {
                     </div>
                     <button className="contact__button" name="contact-button">Save Changes</button>
                 </form>
-            </>
+            </section>
         );
     }
 }

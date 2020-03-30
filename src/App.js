@@ -6,6 +6,8 @@ import {Helmet} from 'react-helmet';
 import BasicForm from "./components/BasicForm/BasicForm";
 import HomePage from "./components/HomePage/HomePage";
 import LinkForm from "./components/LinkForm/LinkForm";
+import AwardForm from './components/AwardForm/AwardForm';
+import LangForm from './components/LangForm/LangForm';
 
 export default class App extends React.Component {
 
@@ -21,6 +23,8 @@ export default class App extends React.Component {
             <Route path='/' exact component={HomePage} />
             <Route path='/BasicForm' component={BasicForm} />
             <Route path='/LinkForm' component={LinkForm} />
+            <Route path='/AwardForm' component={AwardForm} />
+            <Route path='/LangForm' component={LangForm} />
 
           </Switch>
         </BrowserRouter>
