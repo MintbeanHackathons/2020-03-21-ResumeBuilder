@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 
 // import styling 
 import './AwardForm.scss';
+import '../styling/form-master.scss';
 
 //import application components
 
@@ -65,21 +66,21 @@ export default class AwardForm extends Component {
                     <section className="award__intro">
                         <h1>Resume Builder - Awards</h1>
                     </section>
-                    <div className="award__form-award-title">
-                        <label className="award__award-title-label" htmlFor="twitter">Award Title:</label>
-                        <input className="award__award-title-field" type="text" name="twitter" id="userATitle" required/>
+                    <div className="award__form-award-title form-div">
+                        <label className="award__award-title-label form-label" htmlFor="title">Award Title:</label>
+                        <input className="award__award-title-field form-field" type="text" name="title" id="userATitle" required/>
                     </div>
-                    <div className="award__form-award-date">
-                        <label className="award__award-date-label" htmlFor="github">Date:</label>
-                        <input className="award__award-date-field" type="text" name="github" id="userADate" required/>
+                    <div className="award__form-award-date form-div">
+                        <label className="award__award-date-label form-label" htmlFor="date">Date:</label>
+                        <input className="award__award-date-field form-field" type="text" name="date" id="userADate" required/>
                     </div>
-                    <div className="award__form-awarder">
-                        <label className="award__awarder-label" htmlFor="stack">Company:</label>
-                        <input className="award__awarder-field" type="text" name="stack" id="userAwarder" required/>
+                    <div className="award__form-awarder form-div">
+                        <label className="award__awarder-label form-label" htmlFor="awarder">Company:</label>
+                        <input className="award__awarder-field form-field" type="text" name="awarder" id="userAwarder" required/>
                     </div>
-                    <div className="award__form-award-summary">
-                        <label className="award__award-summary-label" htmlFor="stack">Summary of the Award:</label>
-                        <input className="award__award-summary-field" type="text" name="stack" id="userASummary" required/>
+                    <div className="award__form-award-summary form-div">
+                        <label className="award__award-summary-label form-label" htmlFor="summary">Summary of the Award:</label>
+                        <input className="award__award-summary-field form-field" type="text" name="summary" id="userASummary" required/>
                     </div>
                     <button className="award__button" name="award-button">Save Changes</button>                    
                 </form>

@@ -29,130 +29,31 @@
   
     }
 
-    &__form-award-title {
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 10px;
-    }
-    
-
-    @media screen and (min-width: 768px) {
-        &__award-title-label {
-            font-size: larger;
-            float:left;
-            width: 35%;
-            text-align:right;
-            margin-right:15px;
-        }}
+    // &__form-award-title {
+    //     display: flex;
+    //     flex-direction: row;
+    //     margin-bottom: 10px;
+    // }
     
     
-    @media screen and (min-width: 768px) {
-        &__award-title-field {   
-            display: block;
-            box-sizing: border-box;
-            border: 1px black solid;
-            border-radius: 5px;
-            height: 25px;
-            font-size: large;
-            background-color: lightyellow;
-            margin-right: 20%;
-            float: left;
-            width: 30%;
-        }}
-        &__form-award-date {
-            display: flex;
-            flex-direction: row;
-            margin-bottom: 10px;
-        }
+        // &__form-award-date {
+        //     display: flex;
+        //     flex-direction: row;
+        //     margin-bottom: 10px;
+        // }
         
-    
-    @media screen and (min-width: 768px) {
-        &__award-date-label {
-            font-size: larger;
-            float:left;
-            width: 35%;
-            text-align:right;
-            margin-right:15px;
-        }}
-    
-    
-    @media screen and (min-width: 768px) {
-        &__award-date-field {   
-            display: block;
-            box-sizing: border-box;
-            border: 1px black solid;
-            border-radius: 5px;
-            height: 25px;
-            font-size: large;
-            background-color: lightyellow;
-            margin-right: 20%;
-            float: left;
-            width: 30%;
-        }}
+    // &__form-awarder {
+    //     display: flex;
+    //     flex-direction: row;
+    //     margin-bottom: 10px;
+    // }
 
-    &__form-awarder {
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 10px;
-    }
-        
-
-    @media screen and (min-width: 768px) {
-        &__awarder-label {
-            font-size: larger;
-            float:left;
-            width: 35%;
-            text-align:right;
-            margin-right:15px;
-        }}
-
-
-    @media screen and (min-width: 768px) {
-        &__awarder-field {   
-            display: block;
-            box-sizing: border-box;
-            border: 1px black solid;
-            border-radius: 5px;
-            height: 25px;
-            font-size: large;
-            background-color: lightyellow;
-            margin-right: 20%;
-            float: left;
-            width: 30%;
-        }}
-
-        &__form-award-summary {
-            display: flex;
-            flex-direction: row;
-            margin-bottom: 10px;
-        }
-            
+        // &__form-award-summary {
+        //     display: flex;
+        //     flex-direction: row;
+        //     margin-bottom: 10px;
+        // }    
     
-        @media screen and (min-width: 768px) {
-            &__award-summary-label {
-                font-size: larger;
-                float:left;
-                width: 35%;
-                text-align:right;
-                margin-right:15px;
-            }}
-    
-    
-        @media screen and (min-width: 768px) {
-            &__award-summary-field {   
-                display: block;
-                box-sizing: border-box;
-                border: 1px black solid;
-                border-radius: 5px;
-                height: 25px;
-                font-size: large;
-                background-color: lightyellow;
-                margin-right: 20%;
-                float: left;
-                width: 30%;
-            }}
-    
-
     
     @media screen and (max-width: 599px) {
     &__button {
