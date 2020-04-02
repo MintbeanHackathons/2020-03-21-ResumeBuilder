@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
-import { NavLink, Route } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 // import styling 
 import './HomeForm.scss';
 
 //import application components
-import BasicForm from '../BasicForm/BasicForm';
-import LinkForm from '../LinkForm/LinkForm';
-import AwardForm from '../AwardForm/AwardForm';
-import LangForm from '../LangForm/LangForm';
 
 export default class Homepage extends Component {
 
@@ -68,21 +64,18 @@ export default class Homepage extends Component {
                     <label className="resume__item-label">Contact Information</label>
                     <button className="resume__button" name="resume-button">
                         <NavLink className="resume__link" activeClassName="active" to='/BasicForm'>Contact Information</NavLink>
-                        <Route path='/BasicForm' component={BasicForm} />
                     </button>
                 </div>
                 <div className="resume__item">
                     <label className="resume__item-label">Languages</label>                    
                     <button className="resume__button" name="resume-button">
                         <NavLink className="resume__link" activeClassName="active" to='/LangForm'>Language Skills</NavLink>
-                        <Route path='/LangForm' component={LangForm} />
                     </button>
                 </div>  
                 <div className="resume__item">
                     <label className="resume__item-label">Profile Links</label>
                     <button className="resume__button" name="resume-button">
                         <NavLink className="resume__link" activeClassName="active" to='/LinkForm'>Profile Links</NavLink>
-                        <Route path='/LinkForm' component={LinkForm} />
                     </button>
                 </div>
                 <div className="resume__item">
@@ -101,7 +94,6 @@ export default class Homepage extends Component {
                     <label className="resume__item-label">Awards</label>
                     <button className="resume__button" name="resume-button">
                         <NavLink className="resume__link" activeClassName="active" to='/AwardForm'>Awards</NavLink>
-                        <Route path='/AwardForm' component={AwardForm} />
                     </button>
                 </div>
                 <div className="resume__item">

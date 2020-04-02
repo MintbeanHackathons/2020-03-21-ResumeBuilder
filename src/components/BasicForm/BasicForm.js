@@ -19,9 +19,6 @@ export default class BasicForm extends Component {
         let jsonProv = e.target.userProv.value;
         let jsonPostcode = e.target.userPostcode.value;
         let jsonTelephone = e.target.userTelephone.value;
-        let jsonTwitter = e.target.userTwitter.value;
-        let jsonGithub = e.target.userGithub.value;
-        let jsonStack = e.target.userStack.value;
 
         // // init db
         // let db;
@@ -54,22 +51,7 @@ export default class BasicForm extends Component {
                     "postalCode": jsonPostcode,
                     "city": jsonCity,
                     "region": jsonProv
-                },
-                "profiles": [{
-                    "network": "Twitter",
-                    "username": jsonTwitter,
-                    "url": `www.twitter.com/${jsonTwitter}`
-                },
-                {
-                    "network": "Github",
-                    "username": jsonGithub,
-                    "url": `www.github.com/${jsonGithub}`
-                },
-                {
-                    "network": "Stackoverflow",
-                    "username": jsonStack,
-                    "url": `www.stackoverflow.com/${jsonStack}`
-                }]
+                }
             }
         }
         console.log(output);
