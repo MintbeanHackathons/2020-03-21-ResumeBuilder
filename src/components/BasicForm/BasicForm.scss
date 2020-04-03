@@ -56,6 +56,9 @@
         margin-bottom: 10px;
     }
     
+    &__summary-field {
+        height: 5rem;
+    }
     @media screen and (max-width: 767px) {
     &__location {
         display: flex;

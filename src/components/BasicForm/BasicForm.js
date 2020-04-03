@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 
 // import styling 
-import './BasicForm.scss';
 import '../styling/form-master.scss';
+import './BasicForm.scss';
 
 //import application components
 
@@ -20,24 +20,29 @@ export default class BasicForm extends Component {
         let jsonProv = e.target.userProv.value;
         let jsonPostcode = e.target.userPostcode.value;
         let jsonTelephone = e.target.userTelephone.value;
+        let jsonSummary = e.target.userSummary.value;
 
 
-        let output = {
-            "basics": {
-                "name": jsonName,
-                "title": jsonTitle,
-                "email": jsonEmail,
-                "website": jsonWebsite,
-                "telephone": jsonTelephone,
-                "location": {
-                    "address": jsonStreet,
-                    "postalCode": jsonPostcode,
-                    "city": jsonCity,
-                    "region": jsonProv
-                }
-            }
-        }
-        console.log(output);
+        let basics = {
+            "name": jsonName,
+            "label": jsonTitle,
+            "email": jsonEmail,
+            "website": jsonWebsite,
+            "telephone": jsonTelephone,
+            "location": {
+                "address": jsonStreet,
+                "postalCode": jsonPostcode,
+                "city": jsonCity,
+                "region": jsonProv
+            },
+            "summary": jsonSummary
+
+        };
+        console.log('raw input:', basics);
+        let output = JSON.stringify({ basics });
+
+        localStorage.setItem('basics', output);
+        console.log('localStorage:', localStorage.getItem('basics'));
     }
 
     render() {
@@ -76,6 +81,10 @@ export default class BasicForm extends Component {
                     <div className="contact__form-telephone form-div">
                         <label className="contact__telephone-label form-label" htmlFor="telephone">Enter your telephone number:</label>
                         <input className="contact__telephone-field form-field" type="number" name="telephone" id="userTelephone" required/>
+                    </div>
+                    <div className="contact__form-summary form-div">
+                        <label className="contact__summary-label form-label" htmlFor="summary">Provide a summary of your objectives:</label>
+                        <textarea className="contact__summary-field form-field" type="text" name="summary" id="userSummary" rows="4" required/>
                     </div>
                     <button className="contact__button" name="contact-button">Save Changes</button>
                 </form>
