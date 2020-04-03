@@ -25,31 +25,6 @@
         padding-top: 5%;
     }}
     
-    &__form {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 400px;
-        font-size: 16px;
-        margin-left: 36px;
-        margin-right: 36px;
-  
-    }
-
-    @media screen and (max-width: 767px) {
-    &__form {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 400px;
-        font-size: 14px;
-        margin-left: 0px;
-        margin-right: 0px;
-    
-    }}
-    
-
-            
     
     @media screen and (max-width: 599px) {
     &__button {

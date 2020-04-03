@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 
 // import styling 
-import './LinkForm.scss';
 import '../styling/form-master.scss';
+import './LinkForm.scss';
 
 //import application components
 
@@ -58,7 +58,7 @@ export default class LinkForm extends Component {
     render() {
         return (
             <section className="links">
-                <form className="links__form" id="inputCapture" onSubmit={this.buildJSON}>   
+                <form className="links__form form-layout" id="inputCapture" onSubmit={this.buildJSON}>   
                     <section className="links__intro">
                         <h1>Resume Builder - Social Media Links</h1>
                     </section>

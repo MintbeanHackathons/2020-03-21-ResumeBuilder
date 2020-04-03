@@ -4,8 +4,8 @@ import { NavLink } from 'react-router-dom';
 
 
 // import styling 
-import './LangForm.scss';
 import '../styling/form-master.scss';
+import './LangForm.scss';
 
 //import application components
 // let loopInd = 0;
@@ -62,7 +62,7 @@ export default class LangForm extends Component {
     render() {
         return (
             <section className="lang">
-                <form className="lang__form" id="inputCapture" onSubmit={this.readInput}>   
+                <form className="lang__form form-layout" id="inputCapture" onSubmit={this.readInput}>   
                     <section className="lang__intro">
                         <h1>Resume Builder - Language Skills</h1>
                     </section>

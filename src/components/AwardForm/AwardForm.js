@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 
 // import styling 
-import './AwardForm.scss';
 import '../styling/form-master.scss';
+import './AwardForm.scss';
 
 //import application components
 
@@ -62,7 +62,7 @@ export default class AwardForm extends Component {
     render() {
         return (
             <section className="award">
-                <form className="award__form" id="inputCapture" onSubmit={this.readInput}>   
+                <form className="award__form form-layout" id="inputCapture" onSubmit={this.readInput}>   
                     <section className="award__intro">
                         <h1>Resume Builder - Awards</h1>
                     </section>

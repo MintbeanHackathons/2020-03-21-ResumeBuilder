@@ -48,7 +48,7 @@ export default class BasicForm extends Component {
     render() {
         return (
             <section className="contact">
-                <form className="contact__form" id="inputCapture" onSubmit={this.buildJSON}>   
+                <form className="contact__form form-layout" id="inputCapture" onSubmit={this.buildJSON}>   
                     <section className="contact__intro">
                         <h1>Resume Builder - Contact Info</h1>
                     </section>
