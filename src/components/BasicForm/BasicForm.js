@@ -38,11 +38,10 @@ export default class BasicForm extends Component {
             "summary": jsonSummary
 
         };
-        console.log('raw input:', basics);
         let output = JSON.stringify({ basics });
 
         localStorage.setItem('basics', output);
-        console.log('localStorage:', localStorage.getItem('basics'));
+        console.log(localStorage.getItem('basics'));
     }
 
     render() {
@@ -84,7 +83,7 @@ export default class BasicForm extends Component {
                     </div>
                     <div className="contact__form-summary form-div">
                         <label className="contact__summary-label form-label" htmlFor="summary">Provide a summary of your objectives:</label>
-                        <textarea className="contact__summary-field form-field" type="text" name="summary" id="userSummary" rows="4" required/>
+                        <textarea className="contact__summary-field form-field" type="text" name="summary" id="userSummary" required/>
                     </div>
                     <button className="contact__button" name="contact-button">Save Changes</button>
                 </form>

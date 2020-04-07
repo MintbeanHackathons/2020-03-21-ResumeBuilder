@@ -8,6 +8,7 @@
     
     background-image: url('../images/award-background.jpg');
     background-size: contain;
+    background-position: center;
     color: white;
     font-style: bold;
     height: 60vw;
@@ -18,6 +19,10 @@
             font-size: 3rem;
             padding-top: 5%;
         }}
+        
+    &__award-summary-field {
+        height: 5rem;
+    }
         
     @media screen and (max-width: 599px) {
     &__button {
@@ -97,7 +102,7 @@
 
     &__repeat {
         width: 250px;
-        margin-left: 40%;
+        margin-left: 42.5%;
         background-color: #daafeb;
         color: midnightblue;
         font-size: 24px;

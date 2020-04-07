@@ -8,6 +8,11 @@ import HomePage from "./components/HomePage/HomePage";
 import LinkForm from "./components/LinkForm/LinkForm";
 import AwardForm from './components/AwardForm/AwardForm';
 import LangForm from './components/LangForm/LangForm';
+import PubsForm from './components/PubsForm/PubsForm';
+import ReferForm from './components/ReferForm/ReferForm';
+import EducForm from './components/EducForm/EducForm';
+import VolForm from './components/VolForm/VolForm';
+import IntForm from './components/IntForm/IntForm';
 
 export default class App extends React.Component {
 
@@ -25,7 +30,11 @@ export default class App extends React.Component {
             <Route path='/LinkForm' component={LinkForm} />
             <Route path='/AwardForm' component={AwardForm} />
             <Route path='/LangForm' component={LangForm} />
-
+            <Route path='/PubsForm' component={PubsForm} />
+            <Route path='/ReferForm' component={ReferForm} />
+            <Route path='/EducForm' component={EducForm} />
+            <Route path='/VolForm' component={VolForm} />
+            <Route path='/IntForm' component={IntForm} />
           </Switch>
         </BrowserRouter>
       </>

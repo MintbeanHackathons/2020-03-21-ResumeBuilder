@@ -27,7 +27,7 @@ export default class AwardForm extends Component {
         // get to see if there is an active record in localStorage and create if not
         if (localStorage.getItem('awards')) {
             let oldOutput = JSON.parse(localStorage.getItem('awards'));
-            let output = JSON.stringify({ "awards": [ {oldOutput}, {newObj}]});
+            let output = JSON.stringify( [oldOutput, newObj] );
             console.log('second pass:', output);
             // let varName = 'language';
 
@@ -36,9 +36,7 @@ export default class AwardForm extends Component {
             console.log('localStorage:', localStorage.getItem('awards'));
         } 
         else {
-        let output = JSON.stringify({
-            "awards": [ {newObj} ]
-        })
+        let output = JSON.stringify( newObj );
         console.log('first pass:', output);
         let varName = 'awards';
         localStorage.setItem(varName, output);  

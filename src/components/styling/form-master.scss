@@ -4,6 +4,7 @@
     width: 35%;
     text-align:right;
     margin-right:15px;
+    font-weight: bold;
 }
 
 .form-field {   
@@ -27,9 +28,9 @@
 
 .form-layout {
     display: flex;
-            flex-direction: column;
-            width: 100%;
-            font-size: 16px;
-            margin-left: 36px;
-            margin-right: 36px;
+    flex-direction: column;
+    width: 100%;
+    font-size: 16px;
+    margin-left: 36px;
+    margin-right: 36px;
 }

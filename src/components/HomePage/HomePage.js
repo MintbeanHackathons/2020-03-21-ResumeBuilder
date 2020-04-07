@@ -84,11 +84,16 @@ export default class Homepage extends Component {
                 </div>
                 <div className="resume__item">
                     <label className="resume__item-label">Education</label>            
-                    <button className="resume__button" name="resume-button">Education</button>
+                    <button className="resume__button" name="resume-button">
+                        <NavLink className="resume__link" activeClassName="active" to='/EducForm'>Education</NavLink>
+                    </button>
                 </div>
                 <div className="resume__item">
                     <label className="resume__item-label">Volunteer Experience</label>
-                    <button className="resume__button" name="resume-button">Volunteer</button>
+                    <button className="resume__button" name="resume-button">
+                        <NavLink className="resume__link" activeClassName="active" to='/VolForm'>Volunteer</NavLink>
+                    </button>
+
                 </div>
                 <div className="resume__item">
                     <label className="resume__item-label">Awards</label>
@@ -102,15 +107,22 @@ export default class Homepage extends Component {
                 </div>
                 <div className="resume__item">
                     <label className="resume__item-label">Publications</label>                    
-                    <button className="resume__button" name="resume-button">Publications</button>
+                    <button className="resume__button" name="resume-button">
+                        <NavLink className="resume__link" activeClassName="active" to='/PubsForm'>Publications</NavLink>
+                    </button>
                 </div>
                 <div className="resume__item">
                     <label className="resume__item-label">Interests</label>    
-                    <button className="resume__button" name="resume-button">Interests</button>
+                    <button className="resume__button" name="resume-button">
+                        <NavLink className="resume__link" activeClassName="active" to='/IntForm'>Interests</NavLink>
+                    </button>
+
                     </div>
                 <div className="resume__item">
                     <label className="resume__item-label">References</label>
-                    <button className="resume__button" name="resume-button">References</button>
+                    <button className="resume__button" name="resume-button">
+                        <NavLink className="resume__link" activeClassName="active" to='/ReferForm'>References</NavLink>
+                    </button>
                 </div>    
             </section>
         );
