@@ -13,6 +13,8 @@ import ReferForm from './components/ReferForm/ReferForm';
 import EducForm from './components/EducForm/EducForm';
 import VolForm from './components/VolForm/VolForm';
 import IntForm from './components/IntForm/IntForm';
+import SkillForm from './components/SkillForm/SkillForm';
+import WorkForm from './components/WorkForm/WorkForm';
 
 export default class App extends React.Component {
 
@@ -35,6 +37,8 @@ export default class App extends React.Component {
             <Route path='/EducForm' component={EducForm} />
             <Route path='/VolForm' component={VolForm} />
             <Route path='/IntForm' component={IntForm} />
+            <Route path='/SkillForm' component={SkillForm} />
+            <Route path='/WorkForm' component={WorkForm} />
           </Switch>
         </BrowserRouter>
       </>

@@ -39,7 +39,6 @@ export default class VolForm extends Component {
             let oldOutput = JSON.parse(localStorage.getItem('volunteer'));
             let output = JSON.stringify({ "volunteer": [ {oldOutput}, {newObj}]});
             console.log('second pass:', output);
-            // let varName = 'language';
 
             localStorage.setItem('volunteer', output);
     

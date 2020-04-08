@@ -80,7 +80,9 @@ export default class Homepage extends Component {
                 </div>
                 <div className="resume__item">
                     <label className="resume__item-label">Employment History</label>
-                    <button className="resume__button" name="resume-button">Employment History</button>
+                    <button className="resume__button" name="resume-button">
+                        <NavLink className="resume__link" activeClassName="active" to='/WorkForm'>Employment History</NavLink>
+                    </button>
                 </div>
                 <div className="resume__item">
                     <label className="resume__item-label">Education</label>            
@@ -103,7 +105,10 @@ export default class Homepage extends Component {
                 </div>
                 <div className="resume__item">
                     <label className="resume__item-label">Skills</label>                    
-                    <button className="resume__button" name="resume-button">Skills</button>
+                    <button className="resume__button" name="resume-button">
+                        <NavLink className="resume__link" activeClassName="active" to='/SkillForm'>Skills</NavLink>
+                    </button>
+
                 </div>
                 <div className="resume__item">
                     <label className="resume__item-label">Publications</label>                    
