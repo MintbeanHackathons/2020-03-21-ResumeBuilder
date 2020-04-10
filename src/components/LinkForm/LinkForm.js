@@ -53,6 +53,7 @@ export default class LinkForm extends Component {
         let output = JSON.stringify({ profiles });
 
         localStorage.setItem('profiles', output);
+        console.log(localStorage.getItem('profiles'));
     }   
 
     render() {

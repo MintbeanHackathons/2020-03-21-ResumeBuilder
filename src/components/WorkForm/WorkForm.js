@@ -42,7 +42,7 @@ export default class WorkForm extends Component {
 
             localStorage.setItem('work', output);
     
-            console.log('localStorage:', localStorage.getItem('work'));
+            console.log('localStorage:', localStorage.getItem('basics'), localStorage.getItem('language'), localStorage.getItem('profiles'), localStorage.getItem('work'));
         } 
         else {
         let output = JSON.stringify({
