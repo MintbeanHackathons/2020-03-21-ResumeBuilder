@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { saveAs } from 'file-saver';
 
 
 // import styling 
@@ -11,48 +12,44 @@ export default class LinkForm extends Component {
 
     buildJSON(e) {
         e.preventDefault();
-        let jsonTwitter = e.target.userTwitter.value;
-        let jsonGithub = e.target.userGithub.value;
-        let jsonStack = e.target.userStack.value;
-        let jsonLink = e.target.userLink.value;
-        let jsonFace = e.target.userFace.value;
-        let jsonInsta = e.target.userInsta.value;
-
         let profiles =            
                 [{
                     "network": "Twitter",
-                    "username": jsonTwitter,
-                    "url": `www.twitter.com/${jsonTwitter}`
+                    "username": e.target.userTwitter.value,
+                    "url": `www.twitter.com/${e.target.userTwitter.value}`
                 },
                 {
                     "network": "Github",
-                    "username": jsonGithub,
-                    "url": `www.github.com/${jsonGithub}`
+                    "username": e.target.userGithub.value,
+                    "url": `www.github.com/${e.target.userGithub.value}`
                 },
                 {
                     "network": "Stack Overflow",
-                    "username": jsonStack,
-                    "url": `www.stackoverflow.com/${jsonStack}`
+                    "username": e.target.userStack.value,
+                    "url": `www.stackoverflow.com/${e.target.userStack.value}`
                 },
                 {
                     "network": "LinkedIn",
-                    "username": jsonLink,
-                    "url": `www.linkedin.com/in/${jsonLink}`
+                    "username": e.target.userLink.value,
+                    "url": `www.linkedin.com/in/${e.target.userLink.value}`
                 },
                 {
                     "network": "Facebook",
-                    "username": jsonFace,
-                    "url": `www.facebook.com/${jsonFace}`
+                    "username": e.target.userFace.value,
+                    "url": `www.facebook.com/${e.target.userFace.value}`
                 },
                 {
                     "network": "Instagram",
-                    "username": jsonInsta,
-                    "url": `www.instagram.com/${jsonInsta}`
+                    "username": e.target.userInsta.value,
+                    "url": `www.instagram.com/${e.target.userInsta.value}`
                 }]
 
         let output = JSON.stringify({ profiles });
 
         localStorage.setItem('profiles', output);
+            var file = new File([localStorage.getItem('basics'), localStorage.getItem('profiles')], 'JSH.json');
+            saveAs(file);
+
         console.log(localStorage.getItem('profiles'));
     }   
 
@@ -87,7 +84,6 @@ export default class LinkForm extends Component {
                         <label className="links__insta-label form-label" htmlFor="insta">Enter your Instagram username:</label>
                         <input className="links__insta-field form-field" type="text" name="insta" id="userInsta" required/>
                     </div>
-
                     <button className="links__button" name="links-button">Save Changes</button>
                 </form>
             </section>

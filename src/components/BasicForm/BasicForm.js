@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+// import { saveAs } from 'file-saver';
 
 // import styling 
 import '../styling/form-master.scss';
@@ -11,36 +11,26 @@ export default class BasicForm extends Component {
 
     buildJSON(e) {
         e.preventDefault();
-        let jsonName = e.target.userName.value;
-        let jsonTitle = e.target.userTitle.value;
-        let jsonEmail = e.target.userEmail.value;
-        let jsonWebsite = e.target.userWebsite.value;
-        let jsonStreet = e.target.userStreet.value;
-        let jsonCity = e.target.userCity.value;
-        let jsonProv = e.target.userProv.value;
-        let jsonPostcode = e.target.userPostcode.value;
-        let jsonTelephone = e.target.userTelephone.value;
-        let jsonSummary = e.target.userSummary.value;
-
-
         let basics = {
-            "name": jsonName,
-            "label": jsonTitle,
-            "email": jsonEmail,
-            "website": jsonWebsite,
-            "telephone": jsonTelephone,
+            "name": e.target.userName.value,
+            "label": e.target.userTitle.value,
+            "email": e.target.userEmail.value,
+            "website": e.target.userWebsite.value,
+            "telephone": e.target.userTelephone.value,
             "location": {
-                "address": jsonStreet,
-                "postalCode": jsonPostcode,
-                "city": jsonCity,
-                "region": jsonProv
+                "address": e.target.userStreet.value,
+                "postalCode": e.target.userPostcode.value,
+                "city": e.target.userCity.value,
+                "region": e.target.userProv.value
             },
-            "summary": jsonSummary
+            "summary": e.target.userSummary.value
 
         };
-        let output = JSON.stringify({ basics });
+        // let output = JSON.stringify({ basics });
 
-        localStorage.setItem('basics', output);
+        localStorage.setItem('basics', JSON.stringify({ basics }));
+        // var file = new File([localStorage.getItem('basics')], 'JSH.json');
+        // saveAs(file);
         console.log(localStorage.getItem('basics'));
     }
 
