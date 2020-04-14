@@ -1,0 +1,36 @@
+.form-label {
+    font-size: larger;
+    float:left;
+    width: 35%;
+    text-align:right;
+    margin-right:15px;
+    font-weight: bold;
+}
+
+.form-field {   
+    display: block;
+    box-sizing: border-box;
+    border: 1px black solid;
+    border-radius: 5px;
+    height: 25px;
+    font-size: large;
+    background-color: lightyellow;
+    margin-right: 20%;
+    float: left;
+    width: 30%;
+}
+
+.form-div {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.form-layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 16px;
+    margin-left: 36px;
+    margin-right: 36px;
+}
