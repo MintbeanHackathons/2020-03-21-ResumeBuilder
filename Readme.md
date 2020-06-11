@@ -1,43 +1,28 @@
-# Today's Objective: Hack the Résumé
+# ResumeBuilder
 
-Tip: Read [General Information.md]("./General Information.md") for more info on how to get started and submit.
+First Mintbean Hackathon Project!
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.
 
-In our last Hackathon, we built a project where we generated a resume from a JSON object. 
+## Development server
 
-Today, we will do the opposite -- we will create a simple resume builder form that saves resume information inside a [JSON Resume](https://jsonresume.org) object.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Requirements
+## Code scaffolding
 
-JSON Resume [supports many fields](https://jsonresume.org/schema/). Your goal is to create a builder that supports all of these fields. The builder must then output data to JSON Resume.
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-Required:
-* Your builder must have an input form.
-* Your builder must supports all JSON Resume fields.
-* For array fields, your builder must support unlimited numbers of entries.
+## Build
 
-### Builder Input Requirements
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-You may use any GUI you wish:
-* Plain HTML
-* React
-* Vue
-* Angular
-* Electron
-* CLI (yes, you can make this a terminal-only project)
+## Running unit tests
 
-### Builder Output Requirements
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-* Your output must be in JSON Resume format.
-* You may either (a) display the output immediately, OR (b) save it to a file.
+## Running end-to-end tests
 
-## Restrictions
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-Your project must use JavaScript.
+## Further help
 
-There are no other restrictions.
-
-#### Tips for success:
-
-1. The project is intentionally simple so you can focus on code quality.
-1. The requirements are intentionally minimalistic so you can get as creative as you'd like.
-1. Code review is an opportunity for everyone to really shine.
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
